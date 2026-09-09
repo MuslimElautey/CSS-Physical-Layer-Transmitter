@@ -1,0 +1,27 @@
+# do ../script/run.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 04:57:36 on Sep 09,2026
+# vlog -reportprogress 300 ../rtl/DQPSK.v ../rtl/ff.v ../rtl/qpsk_mapper.v ../rtl/shift_reg.v ../tb/DQPSK_tb.v ../tb/shift_reg_tb.v 
+# -- Compiling module DQPSK
+# -- Compiling module ff
+# -- Compiling module qpsk_mapper
+# -- Compiling module shift_reg
+# -- Compiling module DQPSK_tb
+# -- Compiling module shift_reg_tb
+# 
+# Top level modules:
+# 	qpsk_mapper
+# 	DQPSK_tb
+# 	shift_reg_tb
+# End time: 04:57:36 on Sep 09,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.DQPSK_tb 
+# Start time: 04:57:36 on Sep 09,2026
+# Loading work.DQPSK_tb
+# Loading work.DQPSK
+# Loading work.shift_reg
+# Loading work.ff
+# ** Note: $finish    : ../tb/DQPSK_tb.v(30)
+#    Time: 250 ps  Iteration: 1  Instance: /DQPSK_tb
+# 1
+# Break in Module DQPSK_tb at ../tb/DQPSK_tb.v line 30

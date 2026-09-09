@@ -1,0 +1,145 @@
+m255
+K4
+z2
+!s11f MIXED_VERSIONS
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/mnt/windows-d/Study/Digital_IC/ITI/Final Project/build
+vDQPSK
+Z1 !s110 1788919056
+!i10b 1
+!s100 1Mi?nSOEoZHhOgDm3z62o0
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Ikgeof82o:O8@XN[GS?2NE0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1788918284
+8../rtl/DQPSK.v
+F../rtl/DQPSK.v
+!i122 33
+Z4 L0 1 42
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1788919056.000000
+!s107 ../tb/shift_reg_tb.v|../tb/DQPSK_tb.v|../rtl/shift_reg.v|../rtl/qpsk_mapper.v|../rtl/ff.v|../rtl/DQPSK.v|
+Z7 !s90 -reportprogress|300|../rtl/DQPSK.v|../rtl/ff.v|../rtl/qpsk_mapper.v|../rtl/shift_reg.v|../tb/DQPSK_tb.v|../tb/shift_reg_tb.v|
+!i113 1
+Z8 tCvgOpt 0
+n@d@q@p@s@k
+vDQPSK_tb
+R1
+!i10b 1
+!s100 E<W]8@S>842OElnSZdKOh3
+R2
+I5J>UziYTFYCmEZn>Td?U92
+R3
+R0
+w1788919042
+8../tb/DQPSK_tb.v
+F../tb/DQPSK_tb.v
+!i122 33
+L0 1 48
+R5
+r1
+!s85 0
+31
+R6
+Z9 !s107 ../tb/shift_reg_tb.v|../tb/DQPSK_tb.v|../rtl/shift_reg.v|../rtl/qpsk_mapper.v|../rtl/ff.v|../rtl/DQPSK.v|
+R7
+!i113 1
+R8
+n@d@q@p@s@k_tb
+vff
+R1
+!i10b 1
+!s100 BVG7Nm<ID?8Uk2@7=FzPY1
+R2
+I^=k23P@RI>J2D2^D>nXTg0
+R3
+R0
+w1788915935
+8../rtl/ff.v
+F../rtl/ff.v
+!i122 33
+L0 1 14
+R5
+r1
+!s85 0
+31
+R6
+R9
+R7
+!i113 1
+R8
+vqpsk_mapper
+R1
+!i10b 1
+!s100 n8fZDn^Y<lFP;2EERdWUV0
+R2
+I:kjLIHBLQ0UAb42Fmi0WI3
+R3
+R0
+w1788826771
+8../rtl/qpsk_mapper.v
+F../rtl/qpsk_mapper.v
+!i122 33
+L0 1 20
+R5
+r1
+!s85 0
+31
+R6
+R9
+R7
+!i113 1
+R8
+vshift_reg
+R1
+!i10b 1
+!s100 S^EXbSoKKRgb75DYQSDbk0
+R2
+IIQF1S[:d7CK8@77>OB8Z72
+R3
+R0
+w1788916217
+8../rtl/shift_reg.v
+F../rtl/shift_reg.v
+!i122 33
+L0 1 25
+R5
+r1
+!s85 0
+31
+R6
+R9
+R7
+!i113 1
+R8
+vshift_reg_tb
+R1
+!i10b 1
+!s100 U]]:;Be[TBddk4XTJFUoA0
+R2
+IQF=0Am2oFMU:c5blnM:II3
+R3
+R0
+w1788914616
+8../tb/shift_reg_tb.v
+F../tb/shift_reg_tb.v
+!i122 33
+R4
+R5
+r1
+!s85 0
+31
+R6
+R9
+R7
+!i113 1
+R8
