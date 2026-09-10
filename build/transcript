@@ -1,6 +1,6 @@
 # do ../script/run.do
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:54:16 on Sep 09,2026
+# Start time: 22:29:28 on Sep 10,2026
 # vlog -reportprogress 300 ../rtl/DQPSK.v ../rtl/css_symbols_rom.v ../rtl/ff.v ../rtl/qpsk_mapper.v ../rtl/shift_reg.v ../tb/DQPSK_tb.v ../tb/rom_tb.v ../tb/shift_reg_tb.v 
 # -- Compiling module DQPSK
 # -- Compiling module css_symbols_rom
@@ -16,16 +16,28 @@
 # 	DQPSK_tb
 # 	rom_tb
 # 	shift_reg_tb
-# End time: 19:54:16 on Sep 09,2026, Elapsed time: 0:00:00
+# End time: 22:29:28 on Sep 10,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vsim -voptargs="+acc" work.rom_tb 
-# Start time: 19:54:16 on Sep 09,2026
-# Loading work.rom_tb
-# Loading work.css_symbols_rom
-# ** Note: $finish    : ../tb/rom_tb.v(23)
-#    Time: 1300 ps  Iteration: 0  Instance: /rom_tb
-# 1
-# Break in Module rom_tb at ../tb/rom_tb.v line 23
-# Break key hit
-# End time: 19:57:03 on Sep 09,2026, Elapsed time: 0:02:47
-# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.DQPSK_tb 
+# Start time: 22:29:28 on Sep 10,2026
+# Loading work.DQPSK_tb
+# Loading work.DQPSK
+# Loading work.shift_reg
+# Loading work.ff
+# ** Note: $stop    : ../tb/DQPSK_tb.v(78)
+#    Time: 1970 ps  Iteration: 1  Instance: /DQPSK_tb
+# Break in Module DQPSK_tb at ../tb/DQPSK_tb.v line 78
+add wave -position 5  sim:/DQPSK_tb/dut/S_delayed_r
+add wave -position 6  sim:/DQPSK_tb/dut/S_delayed_i
+restart -f 
+run -all 
+# ** Note: $stop    : ../tb/DQPSK_tb.v(78)
+#    Time: 1970 ps  Iteration: 1  Instance: /DQPSK_tb
+# Break in Module DQPSK_tb at ../tb/DQPSK_tb.v line 78
+add wave -position end  sim:/DQPSK_tb/dut/delay_imag_inst/Q_int
+add wave -position 9  sim:/DQPSK_tb/dut/delay_real_inst/Q_int
+restart -f 
+run -all 
+# ** Note: $stop    : ../tb/DQPSK_tb.v(78)
+#    Time: 1970 ps  Iteration: 1  Instance: /DQPSK_tb
+# Break in Module DQPSK_tb at ../tb/DQPSK_tb.v line 78

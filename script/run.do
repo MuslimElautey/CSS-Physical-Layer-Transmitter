@@ -1,6 +1,6 @@
 vlog ../rtl/*.v ../tb/*.v
 
-vsim -voptargs=+acc work.rom_tb
+vsim -voptargs=+acc work.DQPSK_tb
 
 add wave *
 run -all
