@@ -1,7 +1,7 @@
 module css_symbols_rom #(parameter ADDR_WIDTH = 8, parameter DATA_WIDTH = 6)(
     input [ADDR_WIDTH-1:0] addr,
-    output [DATA_WIDTH-1:0] data_out_r,
-    output [DATA_WIDTH-1:0] data_out_i
+    output signed [DATA_WIDTH-1:0] data_out_r,
+    output signed [DATA_WIDTH-1:0] data_out_i
 );
 
     reg [DATA_WIDTH-1:0] rom_r [0:2**ADDR_WIDTH-1];
