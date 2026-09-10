@@ -1,43 +1,33 @@
-# do ../script/run.do
+# do ../script/csk_run.do
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:29:28 on Sep 10,2026
-# vlog -reportprogress 300 ../rtl/DQPSK.v ../rtl/css_symbols_rom.v ../rtl/ff.v ../rtl/qpsk_mapper.v ../rtl/shift_reg.v ../tb/DQPSK_tb.v ../tb/rom_tb.v ../tb/shift_reg_tb.v 
+# Start time: 01:34:09 on Sep 11,2026
+# vlog -reportprogress 300 ../rtl/DQPSK.v ../rtl/csk_modulator.v ../rtl/css_symbols_rom.v ../rtl/ff.v ../rtl/qpsk_mapper.v ../rtl/shift_reg.v ../tb/DQPSK_tb.v ../tb/csk_mod_tb.v ../tb/rom_tb.v ../tb/shift_reg_tb.v 
 # -- Compiling module DQPSK
+# -- Compiling module csk_modulator
 # -- Compiling module css_symbols_rom
 # -- Compiling module ff
 # -- Compiling module qpsk_mapper
 # -- Compiling module shift_reg
 # -- Compiling module DQPSK_tb
+# -- Compiling module csk_mod_tb
 # -- Compiling module rom_tb
 # -- Compiling module shift_reg_tb
 # 
 # Top level modules:
 # 	qpsk_mapper
 # 	DQPSK_tb
+# 	csk_mod_tb
 # 	rom_tb
 # 	shift_reg_tb
-# End time: 22:29:28 on Sep 10,2026, Elapsed time: 0:00:00
+# End time: 01:34:09 on Sep 11,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vsim -voptargs="+acc" work.DQPSK_tb 
-# Start time: 22:29:28 on Sep 10,2026
-# Loading work.DQPSK_tb
-# Loading work.DQPSK
-# Loading work.shift_reg
-# Loading work.ff
-# ** Note: $stop    : ../tb/DQPSK_tb.v(78)
-#    Time: 1970 ps  Iteration: 1  Instance: /DQPSK_tb
-# Break in Module DQPSK_tb at ../tb/DQPSK_tb.v line 78
-add wave -position 5  sim:/DQPSK_tb/dut/S_delayed_r
-add wave -position 6  sim:/DQPSK_tb/dut/S_delayed_i
-restart -f 
-run -all 
-# ** Note: $stop    : ../tb/DQPSK_tb.v(78)
-#    Time: 1970 ps  Iteration: 1  Instance: /DQPSK_tb
-# Break in Module DQPSK_tb at ../tb/DQPSK_tb.v line 78
-add wave -position end  sim:/DQPSK_tb/dut/delay_imag_inst/Q_int
-add wave -position 9  sim:/DQPSK_tb/dut/delay_real_inst/Q_int
-restart -f 
-run -all 
-# ** Note: $stop    : ../tb/DQPSK_tb.v(78)
-#    Time: 1970 ps  Iteration: 1  Instance: /DQPSK_tb
-# Break in Module DQPSK_tb at ../tb/DQPSK_tb.v line 78
+# vsim -voptargs="+acc" work.csk_mod_tb 
+# Start time: 01:34:09 on Sep 11,2026
+# Loading work.csk_mod_tb
+# Loading work.css_symbols_rom
+# Loading work.csk_modulator
+# ** Note: $stop    : ../tb/csk_mod_tb.v(49)
+#    Time: 3140 ps  Iteration: 0  Instance: /csk_mod_tb
+# Break in Module csk_mod_tb at ../tb/csk_mod_tb.v line 49
+# End time: 01:34:34 on Sep 11,2026, Elapsed time: 0:00:25
+# Errors: 0, Warnings: 0
