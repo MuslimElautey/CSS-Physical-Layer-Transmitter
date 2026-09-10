@@ -34,9 +34,7 @@ module DQPSK (
         end
     end
 
-
     // Final Output Assignment
     assign S_out_r = S_next_r;
     assign S_out_i = S_next_i;
-
 endmodule
