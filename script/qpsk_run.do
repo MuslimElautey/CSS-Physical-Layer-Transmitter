@@ -1,6 +1,6 @@
 vlog ../rtl/*.v ../tb/*.v
 
-vsim -voptargs=+acc work.DQPSK_tb
+vsim -voptargs=+acc work.qpsk_mapper_tb
 
 add wave *
 run -all

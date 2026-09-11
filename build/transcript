@@ -1,33 +1,35 @@
-# do ../script/csk_run.do
+# do ../script/qpsk_run.do
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 01:34:09 on Sep 11,2026
-# vlog -reportprogress 300 ../rtl/DQPSK.v ../rtl/csk_modulator.v ../rtl/css_symbols_rom.v ../rtl/ff.v ../rtl/qpsk_mapper.v ../rtl/shift_reg.v ../tb/DQPSK_tb.v ../tb/csk_mod_tb.v ../tb/rom_tb.v ../tb/shift_reg_tb.v 
+# Start time: 14:34:19 on Sep 11,2026
+# vlog -reportprogress 300 ../rtl/DQPSK.v ../rtl/csk_modulator.v ../rtl/css_symbols_rom.v ../rtl/ff.v ../rtl/qpsk_mapper.v ../rtl/shift_reg.v ../rtl/symbol_mapper.v ../rtl/symbol_mapper_RAM.v ../tb/DQPSK_tb.v ../tb/csk_mod_tb.v ../tb/qpsk_mapper_tb.v ../tb/rom_tb.v ../tb/shift_reg_tb.v 
 # -- Compiling module DQPSK
 # -- Compiling module csk_modulator
 # -- Compiling module css_symbols_rom
 # -- Compiling module ff
 # -- Compiling module qpsk_mapper
 # -- Compiling module shift_reg
+# -- Compiling module symbol_mapper
+# -- Compiling module sm_ram
 # -- Compiling module DQPSK_tb
 # -- Compiling module csk_mod_tb
+# -- Compiling module qpsk_mapper_tb
 # -- Compiling module rom_tb
 # -- Compiling module shift_reg_tb
 # 
 # Top level modules:
-# 	qpsk_mapper
+# 	symbol_mapper
+# 	sm_ram
 # 	DQPSK_tb
 # 	csk_mod_tb
+# 	qpsk_mapper_tb
 # 	rom_tb
 # 	shift_reg_tb
-# End time: 01:34:09 on Sep 11,2026, Elapsed time: 0:00:00
+# End time: 14:34:19 on Sep 11,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vsim -voptargs="+acc" work.csk_mod_tb 
-# Start time: 01:34:09 on Sep 11,2026
-# Loading work.csk_mod_tb
-# Loading work.css_symbols_rom
-# Loading work.csk_modulator
-# ** Note: $stop    : ../tb/csk_mod_tb.v(49)
-#    Time: 3140 ps  Iteration: 0  Instance: /csk_mod_tb
-# Break in Module csk_mod_tb at ../tb/csk_mod_tb.v line 49
-# End time: 01:34:34 on Sep 11,2026, Elapsed time: 0:00:25
-# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.qpsk_mapper_tb 
+# Start time: 14:34:19 on Sep 11,2026
+# Loading work.qpsk_mapper_tb
+# Loading work.qpsk_mapper
+# ** Note: $stop    : ../tb/qpsk_mapper_tb.v(16)
+#    Time: 40 ps  Iteration: 0  Instance: /qpsk_mapper_tb
+# Break in Module qpsk_mapper_tb at ../tb/qpsk_mapper_tb.v line 16

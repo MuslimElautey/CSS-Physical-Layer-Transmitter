@@ -10,27 +10,27 @@ z2
 cModel Technology
 d/mnt/windows-d/Study/Digital_IC/ITI/Final Project/build
 vcsk_mod_tb
-Z0 !s110 1789079649
+Z0 !s110 1789126459
 !i10b 1
 !s100 N`G]0VbGl<;@6fo[IKQBB3
 Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
 ICenCd?<5W89fJ45cdfZAG0
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 Z3 d/home/khaled/CSS-Physical-Layer-Transmitter/build
-w1789078740
+Z4 w1789079730
 8../tb/csk_mod_tb.v
 F../tb/csk_mod_tb.v
-!i122 46
+!i122 48
 L0 1 69
-Z4 OV;L;2020.1;71
+Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z5 !s108 1789079649.000000
-!s107 ../tb/shift_reg_tb.v|../tb/rom_tb.v|../tb/csk_mod_tb.v|../tb/DQPSK_tb.v|../rtl/shift_reg.v|../rtl/qpsk_mapper.v|../rtl/ff.v|../rtl/css_symbols_rom.v|../rtl/csk_modulator.v|../rtl/DQPSK.v|
-Z6 !s90 -reportprogress|300|../rtl/DQPSK.v|../rtl/csk_modulator.v|../rtl/css_symbols_rom.v|../rtl/ff.v|../rtl/qpsk_mapper.v|../rtl/shift_reg.v|../tb/DQPSK_tb.v|../tb/csk_mod_tb.v|../tb/rom_tb.v|../tb/shift_reg_tb.v|
+Z6 !s108 1789126459.000000
+!s107 ../tb/shift_reg_tb.v|../tb/rom_tb.v|../tb/qpsk_mapper_tb.v|../tb/csk_mod_tb.v|../tb/DQPSK_tb.v|../rtl/symbol_mapper_RAM.v|../rtl/symbol_mapper.v|../rtl/shift_reg.v|../rtl/qpsk_mapper.v|../rtl/ff.v|../rtl/css_symbols_rom.v|../rtl/csk_modulator.v|../rtl/DQPSK.v|
+Z7 !s90 -reportprogress|300|../rtl/DQPSK.v|../rtl/csk_modulator.v|../rtl/css_symbols_rom.v|../rtl/ff.v|../rtl/qpsk_mapper.v|../rtl/shift_reg.v|../rtl/symbol_mapper.v|../rtl/symbol_mapper_RAM.v|../tb/DQPSK_tb.v|../tb/csk_mod_tb.v|../tb/qpsk_mapper_tb.v|../tb/rom_tb.v|../tb/shift_reg_tb.v|
 !i113 1
-Z7 tCvgOpt 0
+Z8 tCvgOpt 0
 vcsk_modulator
 R0
 !i10b 1
@@ -42,17 +42,17 @@ R3
 w1789076351
 8../rtl/csk_modulator.v
 F../rtl/csk_modulator.v
-!i122 46
+!i122 48
 L0 1 71
-R4
+R5
 r1
 !s85 0
 31
-R5
-Z8 !s107 ../tb/shift_reg_tb.v|../tb/rom_tb.v|../tb/csk_mod_tb.v|../tb/DQPSK_tb.v|../rtl/shift_reg.v|../rtl/qpsk_mapper.v|../rtl/ff.v|../rtl/css_symbols_rom.v|../rtl/csk_modulator.v|../rtl/DQPSK.v|
 R6
-!i113 1
+Z9 !s107 ../tb/shift_reg_tb.v|../tb/rom_tb.v|../tb/qpsk_mapper_tb.v|../tb/csk_mod_tb.v|../tb/DQPSK_tb.v|../rtl/symbol_mapper_RAM.v|../rtl/symbol_mapper.v|../rtl/shift_reg.v|../rtl/qpsk_mapper.v|../rtl/ff.v|../rtl/css_symbols_rom.v|../rtl/csk_modulator.v|../rtl/DQPSK.v|
 R7
+!i113 1
+R8
 vcss_symbols_rom
 R0
 !i10b 1
@@ -64,17 +64,17 @@ R3
 w1789073654
 8../rtl/css_symbols_rom.v
 F../rtl/css_symbols_rom.v
-!i122 46
+!i122 48
 L0 1 18
-R4
+R5
 r1
 !s85 0
 31
-R5
-R8
 R6
-!i113 1
+R9
 R7
+!i113 1
+R8
 vDQPSK
 R0
 !i10b 1
@@ -83,20 +83,20 @@ R1
 I012UcVlYP4cXUl`31`k9I0
 R2
 R3
-Z9 w1789044916
+Z10 w1789044916
 8../rtl/DQPSK.v
 F../rtl/DQPSK.v
-!i122 46
+!i122 48
 L0 1 40
-R4
+R5
 r1
 !s85 0
 31
-R5
-R8
 R6
-!i113 1
+R9
 R7
+!i113 1
+R8
 n@d@q@p@s@k
 vDQPSK_tb
 R0
@@ -109,17 +109,17 @@ R3
 w1789070217
 8../tb/DQPSK_tb.v
 F../tb/DQPSK_tb.v
-!i122 46
+!i122 48
 L0 1 93
-R4
+R5
 r1
 !s85 0
 31
-R5
-R8
 R6
-!i113 1
+R9
 R7
+!i113 1
+R8
 n@d@q@p@s@k_tb
 vff
 R0
@@ -129,20 +129,20 @@ R1
 I^=k23P@RI>J2D2^D>nXTg0
 R2
 R3
-Z10 w1788922625
+Z11 w1788922625
 8../rtl/ff.v
 F../rtl/ff.v
-!i122 46
+!i122 48
 L0 1 14
-R4
+R5
 r1
 !s85 0
 31
-R5
-R8
 R6
-!i113 1
+R9
 R7
+!i113 1
+R8
 vqpsk_mapper
 R0
 !i10b 1
@@ -151,20 +151,42 @@ R1
 I:kjLIHBLQ0UAb42Fmi0WI3
 R2
 R3
-R10
+R11
 8../rtl/qpsk_mapper.v
 F../rtl/qpsk_mapper.v
-!i122 46
+!i122 48
 L0 1 20
-R4
+R5
 r1
 !s85 0
 31
-R5
-R8
 R6
-!i113 1
+R9
 R7
+!i113 1
+R8
+vqpsk_mapper_tb
+R0
+!i10b 1
+!s100 [5nXIRkHDJzM@F_hL^Tko2
+R1
+IO=:MKJWRhIMhZiOCa]]6?2
+R2
+R3
+w1789126364
+8../tb/qpsk_mapper_tb.v
+F../tb/qpsk_mapper_tb.v
+!i122 48
+L0 1 19
+R5
+r1
+!s85 0
+31
+R6
+R9
+R7
+!i113 1
+R8
 vrom_tb
 R0
 !i10b 1
@@ -173,20 +195,20 @@ R1
 IZ76c6j;DF?EchCXc8@c;S3
 R2
 R3
-R9
+R10
 8../tb/rom_tb.v
 F../tb/rom_tb.v
-!i122 46
+!i122 48
 L0 1 27
-R4
+R5
 r1
 !s85 0
 31
-R5
-R8
 R6
-!i113 1
+R9
 R7
+!i113 1
+R8
 vshift_reg
 R0
 !i10b 1
@@ -195,20 +217,20 @@ R1
 IIQF1S[:d7CK8@77>OB8Z72
 R2
 R3
-R10
+R11
 8../rtl/shift_reg.v
 F../rtl/shift_reg.v
-!i122 46
+!i122 48
 L0 1 25
-R4
+R5
 r1
 !s85 0
 31
-R5
-R8
 R6
-!i113 1
+R9
 R7
+!i113 1
+R8
 vshift_reg_tb
 R0
 !i10b 1
@@ -217,17 +239,61 @@ R1
 IQF=0Am2oFMU:c5blnM:II3
 R2
 R3
-R10
+R11
 8../tb/shift_reg_tb.v
 F../tb/shift_reg_tb.v
-!i122 46
+!i122 48
 L0 1 42
-R4
+R5
 r1
 !s85 0
 31
-R5
-R8
 R6
-!i113 1
+R9
 R7
+!i113 1
+R8
+vsm_ram
+R0
+!i10b 1
+!s100 <<=o;QQK;05`UH_nkEzO53
+R1
+IUDjgTRnndznHf6LaS;ZOA0
+R2
+R3
+R4
+8../rtl/symbol_mapper_RAM.v
+F../rtl/symbol_mapper_RAM.v
+!i122 48
+L0 1 32
+R5
+r1
+!s85 0
+31
+R6
+R9
+R7
+!i113 1
+R8
+vsymbol_mapper
+R0
+!i10b 1
+!s100 ?c01>Hn7fEHQ^b6FZA2H81
+R1
+I535nT;Se@X6Ei^0b<k7[h0
+R2
+R3
+R4
+8../rtl/symbol_mapper.v
+F../rtl/symbol_mapper.v
+!i122 48
+L0 1 41
+R5
+r1
+!s85 0
+31
+R6
+R9
+R7
+!i113 1
+R8
