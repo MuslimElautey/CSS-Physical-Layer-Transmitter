@@ -1,7 +1,7 @@
 module piso #(
     parameter DATA_WIDTH = 4
 )(
-    input clk,rst,load,
+    input clk,rst,load,en,
     input [DATA_WIDTH-1:0]in,
     output reg out
 );
@@ -13,11 +13,13 @@ always @(posedge clk) begin
         q<=0;
         out<=0;
     end
-    else if(load)begin
+    else if (en) begin
+        if(load)begin
         q<=in;
-    end
-    else begin
+        end
+        else begin
         {q[DATA_WIDTH-2:0],out}<=q;
+        end
     end
 end
 
