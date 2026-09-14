@@ -8,12 +8,12 @@ Module Description : splits the phr+psdu frame into I & Q paths
 */
 //==========================================================================//
 //===========================Module Declaration=============================//
-module demux (i_serial	,i_invalid_bit	,i_rst	,i_clk	,o_I	,o_valid_I	,o_Q	,o_valid_Q	);
+module demux (i_serial	,i_invalid_bit	,i_rstn	,i_clk	,o_I	,o_valid_I	,o_Q	,o_valid_Q	);
 //===========================Parameters Declaration=========================//
 //===========================Input Declaration==============================//
 input 		i_serial;			//serial bits coming from zero padder		
 input 		i_invalid_bit;		//invalid signal coming from the zero padder
-input		i_rst;
+input		i_rstn;
 input		i_clk;		
 //=========================Output Declaration===============================//
 output reg 		o_Q;				//a bit Output to be paseed to the symbol mapper
@@ -26,7 +26,7 @@ reg				even_bit;
 //===========================Combinational Logic===============================//
 always @ (posedge i_clk)
 	begin
-		if(i_rst)
+		if(!i_rstn)
 			begin
 				o_valid_I 				<= 0;
 				o_valid_Q 				<= 0;
