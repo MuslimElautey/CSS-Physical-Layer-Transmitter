@@ -59,11 +59,11 @@ initial
 	begin
 		error_count = 0;
 		i = 0;
-		i_rst = 1;
+		i_rst = 0;
 		select = 0;
 		@(posedge i_clk);
 		@(negedge i_clk)	
-		i_rst = 0;
+		i_rst = 1;
 		@(posedge i_clk)
 		payload_length = payloadlength;
 		@(negedge i_clk)
