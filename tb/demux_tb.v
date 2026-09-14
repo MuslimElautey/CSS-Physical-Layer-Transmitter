@@ -24,7 +24,7 @@ integer error_count;
 //===========================Reg Declaration================================//
 reg 		i_serial;			//serial bits coming from zero padder		
 reg 		i_invalid_bit;		//invalid signal coming from the zero padder
-reg			i_rst;
+reg			i_rstn;
 reg			i_clk;	
 
 reg			serial_data [0:21];
@@ -39,7 +39,7 @@ wire		o_valid_I;
 wire		o_valid_Q;
 //===========================Sequential Logic===============================//
 //===========================Module Instantiations==========================//
-demux demux_dut (i_serial	,i_invalid_bit	,i_rst	,i_clk	,o_I	,o_valid_I	,o_Q	,o_valid_Q	);
+demux demux_dut (i_serial	,i_invalid_bit	,i_rstn	,i_clk	,o_I	,o_valid_I	,o_Q	,o_valid_Q	);
 //===========================Test Cases=====================================//
 initial 
 	begin
@@ -58,7 +58,7 @@ initial
 	
 initial
 	begin
-		i_rst = 1;
+		i_rstn = 0;
 		i_invalid_bit = 1;
 		i = 0;
 		ind_I =0;
@@ -67,7 +67,7 @@ initial
 		@(posedge i_clk);
 		@(posedge i_clk)
 			begin
-				i_rst = 0;
+				i_rstn = 1;
 				i_invalid_bit = 0;
 			end
 		
@@ -84,7 +84,7 @@ initial
 					begin
 						delivered_Q[ind_Q] = o_Q;
 						ind_Q = ind_Q +1;
-					end
+					end 
 				i = i +1;
 				
 				if (i == 10)
