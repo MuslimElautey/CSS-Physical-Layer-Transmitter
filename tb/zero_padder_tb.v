@@ -21,7 +21,7 @@ integer error_count;
 //=========================Output Declaration============================//
 //===========================Reg Declaration=============================//
 reg		[7:0]		test_vectors		[0:126];
-reg 				i_rst;
+reg 				i_rstn;
 reg 				i_start;
 reg 				i_clk;
 reg		[7:0]		i_payloadlength_data;
@@ -37,7 +37,7 @@ wire	[6:0]		o_ram_address;
 //===========================combinational Logic=============================//
 assign i_payloadlength_data = select ? test_vectors [o_ram_address] : payload_length;
 //===========================Module Instantiations===========================//
-zero_padder zero_padder_dut (i_payloadlength_data	,i_start	,i_clk	,i_rst	,o_done	,o_serial	,o_invalid_bit	,o_ram_address);
+zero_padder zero_padder_dut (i_payloadlength_data	,i_start	,i_clk	,i_rstn	,o_done	,o_serial	,o_invalid_bit	,o_ram_address);
 //===========================Test Cases===========================//
 initial
 	begin
@@ -59,11 +59,11 @@ initial
 	begin
 		error_count = 0;
 		i = 0;
-		i_rst = 0;
+		i_rstn = 0;
 		select = 0;
 		@(posedge i_clk);
 		@(negedge i_clk)	
-		i_rst = 1;
+		i_rstn = 1;
 		@(posedge i_clk)
 		payload_length = payloadlength;
 		@(negedge i_clk)
