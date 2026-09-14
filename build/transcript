@@ -33,3 +33,5 @@
 # ** Note: $stop    : ../tb/qpsk_mapper_tb.v(16)
 #    Time: 40 ps  Iteration: 0  Instance: /qpsk_mapper_tb
 # Break in Module qpsk_mapper_tb at ../tb/qpsk_mapper_tb.v line 16
+# End time: 20:37:24 on Sep 11,2026, Elapsed time: 6:03:05
+# Errors: 0, Warnings: 0
