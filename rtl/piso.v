@@ -17,7 +17,7 @@ always @(posedge clk) begin
     end
     else if (out_en) begin
         valid<=1;
-        {q[DATA_WIDTH-2:0],out}<=q; //shift right by 1 bit
+        {out,q[DATA_WIDTH-1:1]}<=q; //shift left by 1 bit
     end
     else begin
         valid<=0;
