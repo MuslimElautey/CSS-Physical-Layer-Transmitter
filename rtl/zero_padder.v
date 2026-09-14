@@ -8,7 +8,7 @@ Module Description : adds zeros at the LSB's of the Payload to make it divisable
 */
 //==========================================================================//
 //===========================Module Declaration=============================//
-module zero_padder (i_payloadlength_data	,i_start	,i_clk	,i_rst	,o_done	,o_serial	,o_invalid_bit	,o_ram_address);
+module zero_padder (i_payloadlength_data	,i_start	,i_clk	,i_rstn	,o_done	,o_serial	,o_recieved_start	,o_invalid_bit	,o_ram_address);
 //===========================Parameters Declaration=========================//
 parameter	idle 				= 2'b00,
 			sending_phr 		= 2'b01,
@@ -18,11 +18,12 @@ parameter	idle 				= 2'b00,
 input		[7:0]	i_payloadlength_data;		//a byte that contains the data or payload length
 input				i_start;					//signal to start sending the phr
 input				i_clk; 
-input				i_rst;
+input				i_rstn;
 //=========================Output Declaration============================//
 output	reg			o_serial;
 output 	reg			o_done;
 output	reg			o_invalid_bit;
+output	reg			o_recieved_start;
 output	reg [6:0]	o_ram_address;				// used to count no of read payload bytes and also used as an address
 //===========================Reg Declaration=============================//
 reg	signed 	[3:0]	intermediate_calc;			//holds the intermediate value of the mod calculation
@@ -36,13 +37,14 @@ reg			[3:0]	counter; 					// used to count bit sequence
 //===========================Sequential Logic================================//
 always @ (posedge i_clk)
 	begin
-		if(i_rst)
+		if(!i_rstn)
 			begin
 								state					<= idle;
 								counter					<= 0;
 								o_ram_address			<= 0;
 								o_done 					<= 0;
 								o_invalid_bit 			<= 1;
+								o_recieved_start		<= 0;
 			end
 		else
 			begin
@@ -51,6 +53,7 @@ always @ (posedge i_clk)
 								counter					<= 0;
 								o_ram_address			<= 0;
 								o_done 					<= 0;
+								o_recieved_start		<= 0;
 								o_invalid_bit 			<= 1;
 						if (i_start)
 							begin
@@ -66,6 +69,7 @@ always @ (posedge i_clk)
 								counter					<= counter +1;
 								o_serial				<= 0;
 								o_invalid_bit			<= 0;
+								o_recieved_start		<= 1;
 
 							end
 						else if (counter < 12)
@@ -73,6 +77,7 @@ always @ (posedge i_clk)
 								o_serial				<= byte_holder[7];
 								byte_holder				<= byte_holder << 1;
 								counter					<= counter +1;
+								o_recieved_start		<= 0;
 							end
 						else if (!latched_payload_length)
 							begin
