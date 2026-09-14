@@ -8,7 +8,8 @@ module form_ppdu #(
     input sel,    //0->take data ,1->take preamble,SFD
     input [DATA_WIDTH-1:0]I_data,Q_data,
     input [ADDR_WIDTH-1:0]rom_addr,
-    output I,Q
+    output I,Q,
+    output Ivalid,Qvalid //set as high when I,Q updated and ready for transmission
 );
 
     wire [DATA_WIDTH-1:0]I_mux_out,Q_mux_out,rom_out;
@@ -19,7 +20,7 @@ module form_ppdu #(
     preamble_sfd_rom #(.DATA_WIDTH(DATA_WIDTH),.ADDR_WIDTH(ADDR_WIDTH)) rom_dut (
         .clk(clk),.addr(rom_addr),.data(rom_out));
 
-    piso #(.DATA_WIDTH(DATA_WIDTH)) I_piso (.clk(clk),.load(load),.out_en(out_en),.in(I_mux_out),.out(I));
-    piso #(.DATA_WIDTH(DATA_WIDTH)) Q_piso (.clk(clk),.load(load),.out_en(out_en),.in(Q_mux_out),.out(Q));
+    piso #(.DATA_WIDTH(DATA_WIDTH)) I_piso (.clk(clk),.load(load),.out_en(out_en),.in(I_mux_out),.out(I),.valid(Ivalid));
+    piso #(.DATA_WIDTH(DATA_WIDTH)) Q_piso (.clk(clk),.load(load),.out_en(out_en),.in(Q_mux_out),.out(Q),.valid(Qvalid));
 
 endmodule
