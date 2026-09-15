@@ -24,14 +24,16 @@ module chirp_modulation (
     localparam TGAP_ODD  = 70;
 
     // Chirp ROM: 4 subchirps x 38 samples, 6-bit signed, loaded from files
-    reg signed [5:0] chirp_real_rom [0:151];
-    reg signed [5:0] chirp_imag_rom [0:151];
+    //reg signed [5:0] chirp_real_rom [0:151];
+   // reg signed [5:0] chirp_imag_rom [0:151];
     
+	/*
     initial begin
         $readmemb("chirpSequenceReal_tofile.mem", chirp_real_rom);
         $readmemb("chirpSequenceImag_tofile.mem", chirp_imag_rom);
     end
-
+	*/
+	
     localparam S_IDLE=0, S_REQ=1, S_STREAM=2, S_GAP=3;
     reg [1:0] state;
 
