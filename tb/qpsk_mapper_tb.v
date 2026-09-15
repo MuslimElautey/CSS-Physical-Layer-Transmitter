@@ -15,4 +15,19 @@ initial begin
     #10 $stop;
 end
 
+
+
+// Test Stimulus
+initial begin
+    rstn = 0;
+    repeat (3) @(negedge clk);
+    rstn = 1;
+    /*
+        other test stimulus
+    */
+    $finish;
+end
+
+
+
 endmodule
