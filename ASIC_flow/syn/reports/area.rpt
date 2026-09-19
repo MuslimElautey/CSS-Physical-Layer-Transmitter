@@ -1,0 +1,30 @@
+ 
+****************************************
+Report : area
+Design : zigbee_phy_tx
+Version: O-2018.06-SP1
+Date   : Thu Sep 17 02:34:47 2026
+****************************************
+
+Library(s) Used:
+
+    saed90nm_max (File: /home/ICer/Downloads/Lib/synopsys/models/saed90nm_max.db)
+
+Number of ports:                          508
+Number of nets:                         17815
+Number of cells:                        17184
+Number of combinational cells:          13902
+Number of sequential cells:              3257
+Number of macros/black boxes:               0
+Number of buf/inv:                       7052
+Number of references:                      16
+
+Combinational area:             134859.570633
+Buf/Inv area:                    58247.885178
+Noncombinational area:           80965.323809
+Macro/Black Box area:                0.000000
+Net Interconnect area:            8774.928257
+
+Total cell area:                215824.894442
+Total area:                     224599.822699
+1

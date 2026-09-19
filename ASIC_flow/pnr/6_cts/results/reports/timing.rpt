@@ -1,0 +1,79 @@
+****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 1
+        -report_by design
+Design : zigbee_phy_tx
+Version: O-2018.06-SP1
+Date   : Thu Sep 17 22:48:46 2026
+****************************************
+Information: Timer using 'SI, Timing Window Analysis, CRPR'. (TIM-050)
+
+  Startpoint: u_mod_top/u_chirp/subchirp_idx_reg[1] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_mod_top/u_chirp/Tx_imag_reg[7] (rising edge-triggered flip-flop clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: clk
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 2.71      2.71
+
+  u_mod_top/u_chirp/subchirp_idx_reg[1]/CLK (DFFX1)
+                                                   0.00      2.71 r
+  u_mod_top/u_chirp/subchirp_idx_reg[1]/Q (DFFX1)
+                                                   0.80      3.52 r
+  u_mod_top/u_chirp/U489/ZN (INVX0)                0.19      3.71 f
+  u_mod_top/u_chirp/U536/QN (NOR2X0)               0.28      3.99 r
+  u_mod_top/u_chirp/U535/Q (AO21X1)                0.38      4.37 r
+  u_mod_top/u_chirp/add_558/U1_2/CO (FADDX1)       0.40      4.76 r
+  u_mod_top/u_chirp/add_558/U1_3/CO (FADDX1)       0.36      5.12 r
+  u_mod_top/u_chirp/add_558/U1_4/CO (FADDX1)       0.36      5.48 r
+  u_mod_top/u_chirp/add_558/U1_5/CO (FADDX1)       0.35      5.83 r
+  u_mod_top/u_chirp/U530/Q (AND2X1)                0.28      6.11 r
+  u_mod_top/u_chirp/U225/QN (NOR2X0)               0.18      6.29 f
+  u_mod_top/u_chirp/U169/ZN (INVX0)                0.20      6.49 r
+  u_mod_top/u_chirp/U158/QN (NOR2X0)               0.20      6.69 f
+  u_mod_top/u_chirp/U11/QN (NAND2X1)               0.30      6.99 r
+  u_mod_top/u_chirp/PLACE_HFSINV_985_1193/ZN (INVX0)
+                                                   0.37      7.37 f
+  u_mod_top/u_chirp/U95/QN (NAND2X0)               0.26      7.63 r
+  u_mod_top/u_chirp/U358/QN (NAND4X0)              0.40      8.03 f
+  u_mod_top/u_chirp/U62/QN (NOR4X0)                0.36      8.39 r
+  u_mod_top/u_chirp/U26/ZN (INVX0)                 0.28      8.67 f
+  u_mod_top/u_chirp/U60/QN (NOR4X0)                0.33      9.00 r
+  u_mod_top/u_chirp/U324/Q (AND4X1)                0.48      9.48 r
+  u_mod_top/u_chirp/U319/QN (NAND4X0)              0.46      9.94 f
+  u_mod_top/u_chirp/U59/ZN (INVX0)                 0.24     10.17 r
+  u_mod_top/u_chirp/U529/Q (XOR2X1)                0.36     10.53 f
+  u_mod_top/u_chirp/U293/Q (AO22X1)                0.40     10.93 f
+  u_mod_top/u_chirp/add_570/U1_1/CO (FADDX1)       0.45     11.39 f
+  u_mod_top/u_chirp/add_570/U1_2/CO (FADDX1)       0.44     11.83 f
+  u_mod_top/u_chirp/add_570/U1_3/CO (FADDX1)       0.42     12.25 f
+  u_mod_top/u_chirp/add_570/U1_4/CO (FADDX1)       0.39     12.64 f
+  u_mod_top/u_chirp/add_570/U1_5/CO (FADDX1)       0.39     13.03 f
+  u_mod_top/u_chirp/add_570/U1_6/CO (FADDX1)       0.41     13.44 f
+  u_mod_top/u_chirp/add_570/U1_7/Q (XOR3X1)        0.33     13.77 r
+  u_mod_top/u_chirp/U266/Q (AO22X1)                0.28     14.05 r
+  u_mod_top/u_chirp/Tx_imag_reg[7]/D (DFFX1)       0.00     14.05 r
+  data arrival time                                         14.05
+
+  clock clk (rise edge)                           31.25     31.25
+  clock network delay (propagated)                 2.57     33.82
+  clock reconvergence pessimism                    0.05     33.87
+  u_mod_top/u_chirp/Tx_imag_reg[7]/CLK (DFFX1)     0.00     33.87 r
+  clock uncertainty                               -1.25     32.62
+  library setup time                              -0.21     32.41
+  data required time                                        32.41
+  ------------------------------------------------------------------------
+  data required time                                        32.41
+  data arrival time                                        -14.05
+  ------------------------------------------------------------------------
+  slack (MET)                                               18.36
+
+
+1

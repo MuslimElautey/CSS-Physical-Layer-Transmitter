@@ -1,0 +1,273 @@
+
+icc2_shell> 
+icc2_shell> 
+icc2_shell> set design         "zigbee_phy_tx"
+zigbee_phy_tx
+icc2_shell> set prev_stage     "floorplan"
+floorplan
+icc2_shell> set current_stage  "powerplan"
+powerplan
+icc2_shell> 
+icc2_shell> open_lib ../../2_design_lib/results/${design}.dlib
+Information: Loading library file '/mnt/hgfs/VM_Shared/Projects/Assignments/zigbee_phy_tx/pnr/2_design_lib/results/zigbee_phy_tx.dlib' (FILE-007)
+Information: Loading library file '/mnt/hgfs/VM_Shared/Projects/Assignments/zigbee_phy_tx/pnr/1_ndm/ndm/saed90nm_max_1.ndm' (FILE-007)
+{zigbee_phy_tx.dlib}
+icc2_shell> open_block ${design}_${prev_stage}
+Information: User units loaded from library 'saed90nm_max_1' (LNK-040)
+Opening block 'zigbee_phy_tx.dlib:zigbee_phy_tx_floorplan.design' in edit mode
+{zigbee_phy_tx.dlib:zigbee_phy_tx_floorplan.design}
+icc2_shell> copy_block -from_block ${design}_${prev_stage} -to_block ${design}_${current_stage}.design
+{zigbee_phy_tx.dlib:zigbee_phy_tx_powerplan.design}
+icc2_shell> current_block ${design}_${current_stage}.design
+{zigbee_phy_tx.dlib:zigbee_phy_tx_powerplan.design}
+icc2_shell> start_gui
+Begin building search trees for block zigbee_phy_tx.dlib:zigbee_phy_tx_powerplan.design
+Done building search trees for block zigbee_phy_tx.dlib:zigbee_phy_tx_powerplan.design (time 0s)
+icc2_shell> link_block
+Using libraries: zigbee_phy_tx.dlib saed90nm_max_1
+Warning: In library zigbee_phy_tx.dlib, no block views exist for block zigbee_phy_tx. (LNK-064)
+Visiting block zigbee_phy_tx.dlib:zigbee_phy_tx_powerplan.design
+Design 'zigbee_phy_tx' was successfully linked.
+1
+icc2_shell> remove_pg_via_master_rules -all
+No via def rule is found.
+icc2_shell> remove_pg_patterns -all
+No pattern is found.
+icc2_shell> remove_pg_strategies  -all
+All strategies have been removed.
+icc2_shell> remove_pg_strategy_via_rules  -all
+All strategy via rules have been removed.
+icc2_shell> remove_pg_regions -all
+No PG region is found.
+icc2_shell> set ring_width 3
+3
+icc2_shell> set ring_spacing  2
+2
+icc2_shell> set hm_top M9
+M9
+icc2_shell> set vm_top M8
+M8
+icc2_shell> create_net -power  VDD
+{VDD}
+icc2_shell> create_net -ground VSS
+{VSS}
+icc2_shell> set_attribute [get_nets VDD] net_type power
+{VDD}
+icc2_shell> set_attribute [get_nets VSS] net_type ground
+{VSS}
+icc2_shell> get_attribute [get_nets VDD] net_type
+power
+icc2_shell> get_attribute [get_nets VSS] net_type
+ground
+icc2_shell> create_pg_ring_pattern ring_pattern   -horizontal_layer $hm_top  -vertical_layer $vm_top   -horizontal_width $ring_width   -vertical_width $ring_width   -horizontal_spacing $ring_spacing -vertical_spacing $ring_spacing
+Successfully create PG ring pattern ring_pattern.
+icc2_shell> set_pg_strategy core_ring   -core -pattern {{name:ring_pattern} {nets : "VSS VDD"}}
+Successfully set PG strategy core_ring.
+icc2_shell> #set_pg_strategy core_ring   -design_boundary -pattern {{name:ring_pattern} {nets : "VSS VDD"}}
+icc2_shell> #  set_pg_strategy core_ring #     -polygon {{10 10} {649.3600 10} {649.3600 649.3600} {10 649.3600}} #     -pattern {{name:ring_pattern} {nets : "VSS VDD"}}
+icc2_shell> compile_pg -strategies core_ring
+Sanity check for inputs.
+No strategy-level via rule is specified, the default rule will be applied.
+Automatic PG net connection through connect_pg_net is disabled.
+Loading library and design information.
+Updating PG strategies.
+Updating strategy core_ring.
+Number of Standard Cells: 0
+Number of Hard Macros: 0
+Number of Pads: 0
+Creating rings.
+Creating via connection between strategies and existing shapes.
+Via DRC checking runtime 0.00 seconds.
+via connection runtime: 0 seconds.
+Removing dangling/floating wire/vias after DRC check.
+Start iteration 1:
+Checking potential dangling/floating power plan wires.
+Checking dangling/floating vias inside strategy core_ring.
+Checking 8 stacked vias:0% 10% 20% 30% 50% 60% 70% 80% 100%
+Finish removing all dangling or floating wires and vias.
+Commiting wires and vias.
+Committed 8 wires.
+Committing wires takes 0.00 seconds.
+Committed 8 vias.
+Committed 0 wires for via creation.
+Committing vias takes 0.00 seconds.
+Overall PG creation runtime: 2 seconds.
+Successfully compiled PG.
+Overall runtime: 2 seconds.
+1
+icc2_shell> create_pg_mesh_pattern straps_vddvss  -layers {                {{horizontal_layer: M9}{width: 2}                    {spacing: interleaving} {pitch: 20} {offset:0.856} {trim:true}}                {{vertical_layer: M8}{width: 2}                    {spacing: interleaving}{pitch: 20} {offset: 0.856} {trim:true}}             }
+Successfully create mesh pattern straps_vddvss.
+1
+icc2_shell> set_pg_strategy mesh_vddvss -core  -pattern {{ pattern:straps_vddvss}{nets : VSS VDD }}  -extension {{stop: design_boundary_and_generate_pin}}
+Successfully set PG strategy mesh_vddvss.
+icc2_shell> compile_pg -strategies mesh_vddvss
+Sanity check for inputs.
+No strategy-level via rule is specified, the default rule will be applied.
+Automatic PG net connection through connect_pg_net is disabled.
+Loading library and design information.
+Updating PG strategies.
+Updating strategy mesh_vddvss.
+Number of Standard Cells: 0
+Number of Hard Macros: 0
+Number of Pads: 0
+Creating straps and vias in power plan.
+Creating wire shapes for strategies mesh_vddvss .
+User specified offset for layer M9 in pattern straps_vddvss may result in some wires (partially) out of routing area boundary.
+User specified offset for layer M8 in pattern straps_vddvss may result in some wires (partially) out of routing area boundary.
+Creating wire shapes runtime: 0 seconds
+Blockage cutting and DRC fixing for wire shapes for strategies mesh_vddvss .
+Check and fix DRC for 130 wires for strategy mesh_vddvss.
+Checking DRC for 130 wires:0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Creating 130 wires after DRC fixing.
+Wire DRC checking runtime 1.00 seconds.
+Creating via shapes for strategies mesh_vddvss .
+Working on strategy mesh_vddvss.
+Number of detected intersections: 2113
+Total runtime of via shapes creation: 0 seconds
+Check and fix DRC for 2113 stacked vias for strategy mesh_vddvss.
+Checking DRC for 2113 stacked vias:0% 5% 10% 15% 20% 25% 30% 35% 40% 45% 50% 55% 60% 65% 70% 75% 80% 85% 90% 95% 100%
+Runtime of via DRC checking for strategy mesh_vddvss: 1.00 seconds.
+Creating via connection between strategies and existing shapes.
+Check and fix DRCs for 260 stacked vias.
+Checking DRC for 260 stacked vias:0% 5% 10% 15% 20% 25% 30% 35% 40% 45% 50% 55% 60% 65% 70% 75% 80% 85% 90% 95% 100%
+Via DRC checking runtime 0.00 seconds.
+via connection runtime: 0 seconds.
+Removing dangling/floating wire/vias after DRC check.
+Start iteration 1:
+Checking potential dangling/floating power plan wires.
+Checking dangling/floating vias inside strategy mesh_vddvss.
+Checking 2113 stacked vias:0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Checking dangling/floating vias between strategies and existing shapes.
+Checking 260 stacked vias:0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Finish removing all dangling or floating wires and vias.
+Commiting wires and vias.
+Committed 390 wires.
+Created 260 pins at design boundary.
+Committing wires takes 0.00 seconds.
+Committed 2373 vias.
+Committed 0 wires for via creation.
+Committing vias takes 0.00 seconds.
+Overall PG creation runtime: 3 seconds.
+Successfully compiled PG.
+Overall runtime: 3 seconds.
+1
+icc2_shell> 
+Begin building search trees for block zigbee_phy_tx.dlib:zigbee_phy_tx_powerplan.design
+Done building search trees for block zigbee_phy_tx.dlib:zigbee_phy_tx_powerplan.design (time 0s)
+icc2_shell> # ##################################################
+icc2_shell> # ============= Rails VDD/VSS ======================
+icc2_shell> # ##################################################
+icc2_shell> # --- Variables
+icc2_shell> set rail_startegie rails_M1;
+rails_M1
+icc2_shell> set rail_pattern   std_cell_rail;
+std_cell_rail
+icc2_shell> set rail_layer     M1;
+M1
+icc2_shell> set rail_width     0.16;
+0.16
+icc2_shell> # ---- Create rails {Layer , Width}
+icc2_shell> create_pg_std_cell_conn_pattern $rail_pattern -layers $rail_layer -rail_width $rail_width
+Successfully create standard cell rail pattern std_cell_rail.
+icc2_shell> # ---- Define Strategie
+icc2_shell> set_pg_strategy $rail_startegie -core -pattern {{pattern: std_cell_rail} {nets: {VDD VSS}}}
+Successfully set PG strategy rails_M1.
+icc2_shell> # --- Connect pins of cells and submodules to rails
+icc2_shell> # hierarchical [include top module + sub modules]
+icc2_shell> connect_pg_net -net VDD [get_pins -hierarchical */VDD]
+icc2_shell> connect_pg_net -net VSS [get_pins -hierarchical */VSS]
+icc2_shell> # --- compile stratege
+icc2_shell> compile_pg -strategies $rail_startegie
+Sanity check for inputs.
+No strategy-level via rule is specified, the default rule will be applied.
+Automatic PG net connection through connect_pg_net is disabled.
+Loading library and design information.
+Updating PG strategies.
+Updating strategy rails_M1.
+Number of Standard Cells: 0
+Number of Hard Macros: 0
+Number of Pads: 0
+Creating standard cell rails.
+Creating standard cell rails for strategy rails_M1.
+DRC checking and fixing for standard cell rail strategy rails_M1.
+Checking DRC for 229 wires:0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Creating 229 wires after DRC fixing.
+Wire DRC checking runtime 0.00 seconds.
+Creating via connection between strategies and existing shapes.
+Check and fix DRCs for 7443 stacked vias.
+Checking DRC for 7443 stacked vias:0% 5% 10% 15% 20% 25% 30% 35% 40% 45% 50% 55% 60% 65% 70% 75% 80% 85% 90% 95% 100%
+Via DRC checking runtime 5.00 seconds.
+via connection runtime: 5 seconds.
+Removing dangling/floating wire/vias after DRC check.
+Start iteration 1:
+Checking potential dangling/floating power plan wires.
+Checking dangling/floating vias between strategies and existing shapes.
+Checking 7443 stacked vias:0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Finish removing all dangling or floating wires and vias.
+Commiting wires and vias.
+Committed 229 wires.
+Committing wires takes 0.00 seconds.
+Committed 52101 vias.
+Committed 0 wires for via creation.
+Committing vias takes 0.00 seconds.
+Overall PG creation runtime: 6 seconds.
+Successfully compiled PG.
+Overall runtime: 6 seconds.
+1
+icc2_shell> # --- Verify routing of PG nets satisfies technology design rules
+icc2_shell> check_pg_drc
+Command check_pg_drc started  at Thu Sep 17 08:47:38 2026
+Command check_pg_drc finished at Thu Sep 17 08:47:42 2026
+CPU usage for check_pg_drc: 4.05 seconds ( 0.00 hours)
+Elapsed time for check_pg_drc: 4.13 seconds ( 0.00 hours)
+No errors found.
+icc2_shell> # --- Connectivity check for PG networks, standard cell PG pins, PG pads, and...
+icc2_shell> check_pg_connectivity
+Loading cell instances...
+Number of Standard Cells: 17152
+Number of Macro Cells: 0
+Number of IO Pad Cells: 0
+Number of Blocks: 0
+Loading P/G wires and vias...
+Number of VDD Wires: 185
+Number of VDD Vias: 27790
+Number of VDD Terminals: 132
+Number of VSS Wires: 182
+Number of VSS Vias: 26692
+Number of VSS Terminals: 128
+**************Verify net VDD connectivity*****************
+  Number of floating wires: 0
+  Number of floating vias: 0
+  Number of floating std cells: 17152
+  Number of floating hard macros: 0
+  Number of floating I/O pads: 0
+  Number of floating terminals: 0
+  Number of floating hierarchical blocks: 0
+************************************************************
+**************Verify net VSS connectivity*****************
+  Number of floating wires: 0
+  Number of floating vias: 0
+  Number of floating std cells: 17152
+  Number of floating hard macros: 0
+  Number of floating I/O pads: 0
+  Number of floating terminals: 0
+  Number of floating hierarchical blocks: 0
+************************************************************
+Overall runtime: 2 seconds.
+icc2_shell> check_pg_missing_vias
+Check net VDD vias...
+Number of missing vias: 0
+Checking net VDD vias took 1 seconds.
+Check net VSS vias...
+Number of missing vias: 0
+Checking net VSS vias took 0 seconds.
+Overall runtime: 1 seconds.
+icc2_shell> sh rm -rf ../results/reports
+icc2_shell> sh mkdir -p ../results/reports
+icc2_shell> check_pg_drc                    > ../results/reports/pg_drc.rpt
+icc2_shell> check_pg_connectivity           > ../results/reports/pg_connectivity.rpt
+icc2_shell> check_pg_missing_vias           > ../results/reports/missing_via.rpt
+icc2_shell> save_block -as ${design}_${current_stage}  ${design}.dlib:${design}_${current_stage}.design
+Information: Saving block 'zigbee_phy_tx.dlib:zigbee_phy_tx_powerplan.design'
+1
+icc2_shell> 

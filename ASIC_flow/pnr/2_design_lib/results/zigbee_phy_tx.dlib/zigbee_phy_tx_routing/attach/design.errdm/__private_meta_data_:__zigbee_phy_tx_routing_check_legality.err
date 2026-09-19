@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<errorData typeCount="0" majorVersion="1" minorVersion="8" name="__private_meta_data_:__zigbee_phy_tx_routing_check_legality.err" designName="zigbee_phy_tx_routing" info="" checker="Check Legality" checkerVersion="" created="1789661046" createdDate="09:18:2026:00:04:06:CST" modified="1789663929" modifiedDate="09:18:2026:00:52:09:CST" interactive="false" internal="false" metaData="true" numTypes="0" numInsts="0"/>

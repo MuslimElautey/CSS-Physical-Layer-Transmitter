@@ -34,7 +34,7 @@ module symbol_mapper (
     end
 
    
-    always @(posedge clk or negedge rstn) begin
+    always @(posedge clk ) begin
         if (!rstn) begin
             bit_cnt   <= 0;
             shift_reg <= 0;

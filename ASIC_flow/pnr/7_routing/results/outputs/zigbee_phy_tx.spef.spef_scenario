@@ -1,0 +1,6 @@
+../results/outputs/zigbee_phy_tx.spef.maxTLU_125.spef for scenarios: 
+	 scenario: default, corner type: late
+
+../results/outputs/zigbee_phy_tx.spef.minTLU_125.spef for scenarios: 
+	 scenario: default, corner type: early
+

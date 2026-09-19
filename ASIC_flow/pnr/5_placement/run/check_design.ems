@@ -1,0 +1,20 @@
+<Database>
+Name/mnt/hgfs/VM_Shared/Projects/Assignments/zigbee_phy_tx/pnr/5_placement/run/check_design.ems
+Creation TimeThu Sep 17 09:03:06 2026
+Modified TimeThu Sep 17 09:03:07 2026
+Design Namezigbee_phy_tx_placement
+Library Namezigbee_phy_tx.dlib
+</Database>
+<RuleCount>
+DFT-0111
+MV-0274
+</RuleCount>
+<UserDefinedRules>
+</UserDefinedRules>
+<Messages>
+DFT-011reason10
+MV-027tieNetu_ctrl_fsm/*Logic1*1[ get_net { u_ctrl_fsm/*Logic1* } ]8
+MV-027tieNetu_form_ppdu/I_piso/*Logic1*1[ get_net { u_form_ppdu/I_piso/*Logic1* } ]8
+MV-027tieNetu_form_ppdu/Q_piso/*Logic1*1[ get_net { u_form_ppdu/Q_piso/*Logic1* } ]8
+MV-027tieNetu_mod_top/u_chirp/*Logic1*1[ get_net { u_mod_top/u_chirp/*Logic1* } ]8
+</Messages>

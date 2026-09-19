@@ -1,0 +1,39 @@
+<Database>
+Name/mnt/hgfs/zigbee_phy_tx/pnr/7_routing/run/check_design.ems
+Creation TimeThu Sep 17 23:36:10 2026
+Modified TimeThu Sep 17 23:36:11 2026
+Design Namezigbee_phy_tx_routing
+Library Namezigbee_phy_tx.dlib
+</Database>
+<RuleCount>
+DFT-0111
+NEX-0481
+TCK-00116
+TCK-0024
+</RuleCount>
+<UserDefinedRules>
+</UserDefinedRules>
+<Messages>
+DFT-011reason10
+NEX-048portNameVDD_110
+TCK-002cornerdefault1[ get_corners { default } ]40modedefault1[ get_modes { default } ]39pinSpareCell_3_0/CLK1[ get_pin { SpareCell_3_0/CLK } ]6
+TCK-002cornerdefault1[ get_corners { default } ]40modedefault1[ get_modes { default } ]39pinSpareCell_3_1/CLK1[ get_pin { SpareCell_3_1/CLK } ]6
+TCK-002cornerdefault1[ get_corners { default } ]40modedefault1[ get_modes { default } ]39pinSpareCell_3_2/CLK1[ get_pin { SpareCell_3_2/CLK } ]6
+TCK-002cornerdefault1[ get_corners { default } ]40modedefault1[ get_modes { default } ]39pinSpareCell_3_3/CLK1[ get_pin { SpareCell_3_3/CLK } ]6
+TCK-001cornerdefault1[ get_corners { default } ]40endpointSpareCell_3_0/D1[ get_pin { SpareCell_3_0/D } ]6modedefault1[ get_modes { default } ]39reasoncase constant10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointSpareCell_3_0/SI1[ get_pin { SpareCell_3_0/SI } ]6modedefault1[ get_modes { default } ]39reasoncase constant10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointSpareCell_3_0/SE1[ get_pin { SpareCell_3_0/SE } ]6modedefault1[ get_modes { default } ]39reasoncase constant10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointSpareCell_3_1/D1[ get_pin { SpareCell_3_1/D } ]6modedefault1[ get_modes { default } ]39reasoncase constant10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointSpareCell_3_1/SI1[ get_pin { SpareCell_3_1/SI } ]6modedefault1[ get_modes { default } ]39reasoncase constant10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointSpareCell_3_1/SE1[ get_pin { SpareCell_3_1/SE } ]6modedefault1[ get_modes { default } ]39reasoncase constant10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointSpareCell_3_2/D1[ get_pin { SpareCell_3_2/D } ]6modedefault1[ get_modes { default } ]39reasoncase constant10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointSpareCell_3_2/SI1[ get_pin { SpareCell_3_2/SI } ]6modedefault1[ get_modes { default } ]39reasoncase constant10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointSpareCell_3_2/SE1[ get_pin { SpareCell_3_2/SE } ]6modedefault1[ get_modes { default } ]39reasoncase constant10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointSpareCell_3_3/D1[ get_pin { SpareCell_3_3/D } ]6modedefault1[ get_modes { default } ]39reasoncase constant10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointSpareCell_3_3/SI1[ get_pin { SpareCell_3_3/SI } ]6modedefault1[ get_modes { default } ]39reasoncase constant10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointSpareCell_3_3/SE1[ get_pin { SpareCell_3_3/SE } ]6modedefault1[ get_modes { default } ]39reasoncase constant10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointu_ctrl_fsm/ready_for_IQ_d_reg/SETB1[ get_pin { u_ctrl_fsm/ready_for_IQ_d_reg/SETB } ]6modedefault1[ get_modes { default } ]39reasoncase constant10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointu_form_ppdu/I_piso/valid_reg/SETB1[ get_pin { u_form_ppdu/I_piso/valid_reg/SETB } ]6modedefault1[ get_modes { default } ]39reasoncase constant10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointu_form_ppdu/Q_piso/valid_reg/SETB1[ get_pin { u_form_ppdu/Q_piso/valid_reg/SETB } ]6modedefault1[ get_modes { default } ]39reasoncase constant10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointu_mod_top/u_chirp/sample_valid_reg/SETB1[ get_pin { u_mod_top/u_chirp/sample_valid_reg/SETB } ]6modedefault1[ get_modes { default } ]39reasoncase constant10
+</Messages>

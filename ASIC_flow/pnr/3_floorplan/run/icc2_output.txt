@@ -1,0 +1,80 @@
+
+icc2_shell> set design         "zigbee_phy_tx"
+zigbee_phy_tx
+icc2_shell> set prev_stage     "dlib"
+dlib
+icc2_shell> set current_stage "floorplan"
+floorplan
+icc2_shell> 
+icc2_shell> open_lib ../../2_design_lib/results/${design}.dlib
+Information: Loading library file '/mnt/hgfs/VM_Shared/Projects/Assignments/zigbee_phy_tx/pnr/2_design_lib/results/zigbee_phy_tx.dlib' (FILE-007)
+Information: Loading library file '/mnt/hgfs/VM_Shared/Projects/Assignments/zigbee_phy_tx/pnr/1_ndm/ndm/saed90nm_max_1.ndm' (FILE-007)
+{zigbee_phy_tx.dlib}
+icc2_shell> open_block ${design}_${prev_stage}
+Information: User units loaded from library 'saed90nm_max_1' (LNK-040)
+Opening block 'zigbee_phy_tx.dlib:zigbee_phy_tx_dlib.design' in edit mode
+{zigbee_phy_tx.dlib:zigbee_phy_tx_dlib.design}
+icc2_shell> # Create a new working copy for floorplan work
+icc2_shell> copy_block -from_block ${design}_${prev_stage} -to_block ${design}_${current_stage}.design
+{zigbee_phy_tx.dlib:zigbee_phy_tx_floorplan.design}
+icc2_shell> current_block ${design}_${current_stage}.design
+{zigbee_phy_tx.dlib:zigbee_phy_tx_floorplan.design}
+icc2_shell> start_gui
+Begin building search trees for block zigbee_phy_tx.dlib:zigbee_phy_tx_floorplan.design
+Done building search trees for block zigbee_phy_tx.dlib:zigbee_phy_tx_floorplan.design (time 0s)
+icc2_shell> link_block
+Using libraries: zigbee_phy_tx.dlib saed90nm_max_1
+Warning: In library zigbee_phy_tx.dlib, no block views exist for block zigbee_phy_tx. (LNK-064)
+Visiting block zigbee_phy_tx.dlib:zigbee_phy_tx_floorplan.design
+Design 'zigbee_phy_tx' was successfully linked.
+1
+icc2_shell> set_attribute [get_layers {M1 M3 M5 M7 M9 } ] routing_direction horizontal
+Information: The design specific attribute override for layer 'M1' is set in the current block 'zigbee_phy_tx_floorplan', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for layer 'M3' is set in the current block 'zigbee_phy_tx_floorplan', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for layer 'M5' is set in the current block 'zigbee_phy_tx_floorplan', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for layer 'M7' is set in the current block 'zigbee_phy_tx_floorplan', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for layer 'M9' is set in the current block 'zigbee_phy_tx_floorplan', because the actual library setting may not be overwritten. (ATTR-12)
+{M1 M3 M5 M7 M9}
+icc2_shell> set_attribute [get_layers {M2 M4 M6 M8 MRDL} ] routing_direction vertical
+Warning: No layer objects matched 'MRDL' (SEL-004)
+Information: The design specific attribute override for layer 'M2' is set in the current block 'zigbee_phy_tx_floorplan', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for layer 'M4' is set in the current block 'zigbee_phy_tx_floorplan', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for layer 'M6' is set in the current block 'zigbee_phy_tx_floorplan', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for layer 'M8' is set in the current block 'zigbee_phy_tx_floorplan', because the actual library setting may not be overwritten. (ATTR-12)
+{M2 M4 M6 M8}
+icc2_shell> set Name_unit [get_site_defs]
+{unit}
+icc2_shell> set_attribute $Name_unit is_default true
+{unit}
+icc2_shell> set_attribute $Name_unit symmetry y
+{unit}
+icc2_shell> initialize_floorplan     -control_type core     -core_utilization 0.5     -shap R     -core_offset {10}     -flip_first_row true     -side_ratio {1 1}
+Removing existing floorplan objects
+Creating core...
+Core utilization ratio = 50.03%
+Unplacing all cells...
+Creating site array...
+Creating routing tracks...
+Initializing floorplan completed.
+icc2_shell> place_pins -ports [get_ports *]
+
+Min routing layer: M1
+Max routing layer: M9
+
+
+Number of block ports: 46
+Number of block pin locations assigned from router: 0
+Number of PG ports on blocks: 0
+Number of pins created: 46
+CPU Time for Pin Placement: 00:00:00.05u 00:00:00.00s 00:00:00.05e: 
+Total Pin Placement CPU Time: 00:00:00.11u 00:00:00.05s 00:00:00.19e: 
+1
+icc2_shell> sh rm -rf ../results/reports
+icc2_shell> sh mkdir -p ../results/reports
+icc2_shell> report_utilization        > ../results/reports/utilization.rpt
+icc2_shell> report_qor                > ../results/reports/qor.rpt
+icc2_shell> get_placement_blockages   > ../results/reports/blockages.rpt
+icc2_shell> save_block -as ${design}_${current_stage}  ${design}.dlib:${design}_${current_stage}.design
+Information: Saving block 'zigbee_phy_tx.dlib:zigbee_phy_tx_floorplan.design'
+1
+icc2_shell> 

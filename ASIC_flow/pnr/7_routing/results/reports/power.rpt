@@ -1,0 +1,9 @@
+****************************************
+Report : power
+        -significant_digits 2
+Design : zigbee_phy_tx
+Version: O-2018.06-SP1
+Date   : Fri Sep 18 09:20:54 2026
+****************************************
+Warning: Power analysis is disabled for scenario 'default' as leakage/swcap/internal mode power app options can be off and/or leakage_power/dynamic_power scenario flags are set to false. (POW-009)
+0

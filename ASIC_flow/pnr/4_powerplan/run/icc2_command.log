@@ -1,0 +1,113 @@
+#@ # 
+#@ # Running icc2_shell Version O-2018.06-SP1 for linux64 -- Jul 17, 2018
+#@ # Date:   Thu Sep 17 08:44:44 2026
+#@ # Run by: ICer@IC_EDA
+#@ 
+
+set design         "zigbee_phy_tx"
+set prev_stage     "floorplan"
+set current_stage  "powerplan"
+open_lib ../../2_design_lib/results/${design}.dlib
+open_block ${design}_${prev_stage}
+copy_block -from_block ${design}_${prev_stage} -to_block ${design}_${current_stage}.design
+current_block ${design}_${current_stage}.design
+start_gui
+gui_set_pref_value -category {SelectByNamePalette} -key {ObjectType} -value {Logical Cells}
+link_block
+remove_pg_via_master_rules -all
+remove_pg_patterns -all
+remove_pg_strategies  -all
+remove_pg_strategy_via_rules  -all
+remove_pg_regions -all
+set ring_width 3
+set ring_spacing  2
+set hm_top M9
+set vm_top M8
+create_net -power  VDD
+create_net -ground VSS
+set_attribute [get_nets VDD] net_type power
+set_attribute [get_nets VSS] net_type ground
+win_set_filter -visible -class cell -filter {hard_macro_margin hard_margin route_blockage_margin soft_margin}
+win_set_filter -visible -class placement_blockage -filter {wiring} -layer {0-77}
+win_set_filter -expand_cell_types {soft_macro  }
+win_set_select_class -visible {cell port bound routing_blockage shaping_blockage pg_region pin_blockage block_shielding topology_node topology_edge core_area die_area edit_group shape via terminal fill_cell placement_blockage }
+win_set_filter -class cell -filter {cell_array hard_macro_margin hard_margin route_blockage_margin soft_margin}
+win_set_filter -class placement_blockage -filter {wiring} -layer {0-77}
+win_set_select_class {cell port bound routing_blockage shaping_blockage pg_region pin_blockage topology_node topology_edge edit_group shape via placement_blockage }
+get_attribute [get_nets VDD] net_type
+get_attribute [get_nets VSS] net_type
+create_pg_ring_pattern ring_pattern   -horizontal_layer $hm_top  -vertical_layer $vm_top   -horizontal_width $ring_width   -vertical_width $ring_width   -horizontal_spacing $ring_spacing -vertical_spacing $ring_spacing
+set_pg_strategy core_ring   -core -pattern {{name:ring_pattern} {nets : "VSS VDD"}}
+#set_pg_strategy core_ring   -design_boundary -pattern {{name:ring_pattern} {nets : "VSS VDD"}}
+#  set_pg_strategy core_ring #     -polygon {{10 10} {649.3600 10} {649.3600 649.3600} {10 649.3600}} #     -pattern {{name:ring_pattern} {nets : "VSS VDD"}}
+compile_pg -strategies core_ring
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {563.795 223.425}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {565.375 224.810}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {565.875 224.810}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {583.525 230.105}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {583.525 230.105}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {584.560 230.055}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {586.805 230.105}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {586.805 230.105}
+gui_zoom -window [gui_get_current_window -view] -full
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {696.240 271.020}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {686.400 271.200}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {681.355 271.200}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {679.340 271.200}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {676.315 270.065}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {676.305 270.040}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {676.310 270.025}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {676.310 270.010}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {676.315 270.065}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {676.315 269.940}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {676.315 269.690}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {678.330 268.175}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {678.330 265.150}
+create_pg_mesh_pattern straps_vddvss  -layers {                {{horizontal_layer: M9}{width: 2}                    {spacing: interleaving} {pitch: 20} {offset:0.856} {trim:true}}                {{vertical_layer: M8}{width: 2}                    {spacing: interleaving}{pitch: 20} {offset: 0.856} {trim:true}}             }
+set_pg_strategy mesh_vddvss -core  -pattern {{ pattern:straps_vddvss}{nets : VSS VDD }}  -extension {{stop: design_boundary_and_generate_pin}}
+compile_pg -strategies mesh_vddvss
+# ##################################################
+# ============= Rails VDD/VSS ======================
+# ##################################################
+# --- Variables
+set rail_startegie rails_M1;
+set rail_pattern   std_cell_rail;
+set rail_layer     M1;
+set rail_width     0.16;
+# ---- Create rails {Layer , Width}
+create_pg_std_cell_conn_pattern $rail_pattern -layers $rail_layer -rail_width $rail_width
+# ---- Define Strategie
+set_pg_strategy $rail_startegie -core -pattern {{pattern: std_cell_rail} {nets: {VDD VSS}}}
+# --- Connect pins of cells and submodules to rails
+# hierarchical [include top module + sub modules]
+connect_pg_net -net VDD [get_pins -hierarchical */VDD]
+connect_pg_net -net VSS [get_pins -hierarchical */VSS]
+# --- compile stratege
+compile_pg -strategies $rail_startegie
+# --- Verify routing of PG nets satisfies technology design rules
+check_pg_drc
+# --- Connectivity check for PG networks, standard cell PG pins, PG pads, and...
+check_pg_connectivity
+check_pg_missing_vias
+sh rm -rf ../results/reports
+sh mkdir -p ../results/reports
+check_pg_drc                    > ../results/reports/pg_drc.rpt
+check_pg_connectivity           > ../results/reports/pg_connectivity.rpt
+check_pg_missing_vias           > ../results/reports/missing_via.rpt
+save_block -as ${design}_${current_stage}  ${design}.dlib:${design}_${current_stage}.design
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {427.570 244.100}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {427.570 244.100}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {427.570 244.100}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {427.570 244.100}
+gui_zoom -window [gui_get_current_window -view] -full
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {538.960 331.035}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {538.980 332.575}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {538.980 332.575}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {522.600 237.550}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {522.600 237.550}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {522.600 237.550}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {522.600 237.550}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {522.600 237.550}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {522.600 237.550}
+gui_zoom -window [gui_get_current_window -view] -full
+gui_zoom -window [gui_get_current_window -view] -full

@@ -1,0 +1,24 @@
+****************************************
+ Report : target skew and latency
+ Design : zigbee_phy_tx
+ Date   : Thu Sep 17 22:38:33 2026
+****************************************
+
+##Target Skew
+
+Clock                        Corner                        Target
+-----------------------------------------------------------------
+clk (mode default)           default                       0.1
+
+##Target Latency
+
+Clock                        Corner                        Target
+-----------------------------------------------------------------
+clk (mode default)           default                       0
+
+##Max Level Count
+
+Clock                                  Count
+-----------------------------------------------------------------
+No max level constraints found.
+1

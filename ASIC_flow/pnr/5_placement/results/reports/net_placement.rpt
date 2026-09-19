@@ -1,0 +1,200 @@
+****************************************
+Report : net
+Design : zigbee_phy_tx
+Version: O-2018.06-SP1
+Date   : Thu Sep 17 09:14:37 2026
+****************************************
+
+Attributes
+    d - user dont_touch
+    D - derived dont_touch
+
+
+Net                 Fanout    Fanin   Pins         Attributes
+--------------------------------------------------------------------------------
+*Logic0*                 0        0      0         
+IQ_valid                 2        1      3         
+PLACE_HFSNET_1152        4        1      5         
+PLACE_HFSNET_1155        3        1      4         
+PLACE_HFSNET_1157        4        1      5         
+PLACE_HFSNET_1180        9        1     10         
+PLACE_HFSNET_1181        3        1      4         
+PLACE_HFSNET_217         2        1      3         
+PLACE_HFSNET_360         8        1      9         
+PLACE_HFSNET_361         8        1      9         
+PLACE_HFSNET_362        10        1     11         
+PLACE_HFSNET_363        10        1     11         
+PLACE_HFSNET_366        10        1     11         
+PLACE_HFSNET_368         8        1      9         
+PLACE_HFSNET_413         4        1      5         
+PLACE_HFSNET_415         4        1      5         
+PLACE_HFSNET_455         1        1      2         
+PLACE_HFSNET_517         1        1      2         
+PLACE_HFSNET_555         1        1      2         
+PLACE_HFSNET_670         1        1      2         
+PLACE_HFSNET_874         3        1      4         
+Tx_imag[0]               2        1      3         
+Tx_imag[1]               2        1      3         
+Tx_imag[2]               2        1      3         
+Tx_imag[3]               2        1      3         
+Tx_imag[4]               2        1      3         
+Tx_imag[5]               2        1      3         
+Tx_imag[6]               2        1      3         
+Tx_imag[7]               2        1      3         
+Tx_real[0]               2        1      3         
+Tx_real[1]               2        1      3         
+Tx_real[2]               2        1      3         
+Tx_real[3]               2        1      3         
+Tx_real[4]               2        1      3         
+Tx_real[5]               2        1      3         
+Tx_real[6]               2        1      3         
+Tx_real[7]               2        1      3         
+VDD                      0        0      0         
+VSS                      0        0      0         
+clk                   3250        1   3251         
+demux_I                  3        1      4         
+demux_Q                  3        1      4         
+demux_valid_I            2        1      3         
+demux_valid_Q            2        1      3         
+done_Tx                  1        1      2         
+done_mod                 2        1      3         
+last_group               3        1      4         
+optlc_net_0              2        1      3         
+optlc_net_1              1        1      2         
+optlc_net_10             1        1      2         
+optlc_net_11             2        1      3         
+optlc_net_12             2        1      3         
+optlc_net_13             2        1      3         
+optlc_net_14             1        1      2         
+optlc_net_15             2        1      3         
+optlc_net_16             1        1      2         
+optlc_net_17             1        1      2         
+optlc_net_18             1        1      2         
+optlc_net_19             1        1      2         
+optlc_net_2              2        1      3         
+optlc_net_20             1        1      2         
+optlc_net_21             2        1      3         
+optlc_net_22             2        1      3         
+optlc_net_23             1        1      2         
+optlc_net_24             2        1      3         
+optlc_net_25             1        1      2         
+optlc_net_26             1        1      2         
+optlc_net_27             2        1      3         
+optlc_net_28             1        1      2         
+optlc_net_3              2        1      3         
+optlc_net_4              2        1      3         
+optlc_net_5              2        1      3         
+optlc_net_6              1        1      2         
+optlc_net_7              2        1      3         
+optlc_net_8              2        1      3         
+optlc_net_9              1        1      2         
+payloadLength[0]         1        1      2         
+payloadLength[1]         1        1      2         
+payloadLength[2]         1        1      2         
+payloadLength[3]         1        1      2         
+payloadLength[4]         1        1      2         
+payloadLength[5]         1        1      2         
+payloadLength[6]         1        1      2         
+payloadLength[7]         1        1      2         
+payload_addr[0]          3        1      4         
+payload_addr[1]          4        1      5         
+payload_addr[2]          4        1      5         
+payload_addr[3]          2        1      3         
+payload_addr[4]          5        1      6         
+payload_addr[5]          5        1      6         
+payload_addr[6]          6        1      7         
+payload_addr[7]          4        1      5         
+payload_din[0]           6        1      7         
+payload_din[1]           7        1      8         
+payload_din[2]           9        1     10         
+payload_din[3]           1        1      2         
+payload_din[4]           4        1      5         
+payload_din[5]           2        1      3         
+payload_din[6]           9        1     10         
+payload_din[7]           1        1      2         
+payload_ram_dout[0]      1        1      2         
+payload_ram_dout[1]      1        1      2         
+payload_ram_dout[2]      1        1      2         
+payload_ram_dout[3]      1        1      2         
+payload_ram_dout[4]      1        1      2         
+payload_ram_dout[5]      1        1      2         
+payload_ram_dout[6]      1        1      2         
+payload_ram_dout[7]      1        1      2         
+payload_wr_en            3        1      4         
+ppdu_I                   3        1      4         
+ppdu_Q                   3        1      4         
+ppdu_out_en              5        1      6         
+ppdu_sel                 9        1     10         
+ram_I_out[0]             1        1      2         
+ram_I_out[1]             1        1      2         
+ram_I_out[2]             1        1      2         
+ram_I_out[3]             1        1      2         
+ram_Q_out[0]             1        1      2         
+ram_Q_out[1]             1        1      2         
+ram_Q_out[2]             1        1      2         
+ram_Q_out[3]             1        1      2         
+ready_for_IQ             2        1      3         
+reset                    3        1      4         
+rom_rd_addr[0]           4        1      5         
+rom_rd_addr[1]           6        1      7         
+rom_rd_addr[2]           5        1      6         
+rom_rd_addr[3]           6        1      7         
+sample_valid             1        1      2         
+sm_I_data[0]             3        1      4         
+sm_I_data[1]             6        1      7         
+sm_I_data[3]             3        1      4         
+sm_I_wr_addr[0]          8        1      9         
+sm_I_wr_addr[1]          7        1      8         
+sm_I_wr_addr[2]          6        1      7         
+sm_I_wr_addr[3]          6        1      7         
+sm_I_wr_addr[4]          6        1      7         
+sm_I_wr_addr[5]          7        1      8         
+sm_I_wr_addr[6]          6        1      7         
+sm_I_wr_addr[7]          8        1      9         
+sm_I_wr_en               9        1     10         
+sm_Q_wr_addr[0]          4        1      5         
+sm_Q_wr_addr[1]          4        1      5         
+sm_Q_wr_addr[2]          4        1      5         
+sm_Q_wr_addr[3]          4        1      5         
+sm_Q_wr_addr[4]          3        1      4         
+sm_Q_wr_addr[5]          3        1      4         
+sm_Q_wr_addr[6]          4        1      5         
+sm_Q_wr_addr[7]          5        1      6         
+sm_Q_wr_en               7        1      8         
+sm_ram_rd_addr[0]        9        1     10         
+sm_ram_rd_addr[1]       10        1     11         
+sm_ram_rd_addr[2]        8        1      9         
+sm_ram_rd_addr[3]        9        1     10         
+sm_ram_rd_addr[4]        7        1      8         
+sm_ram_rd_addr[5]        6        1      7         
+sm_ram_rd_addr[6]        8        1      9         
+sm_ram_rd_addr[7]        8        1      9         
+start_Tx                 3        1      4         
+zp_invalid_bit           3        1      4         
+zp_modulator_en          4        1      5         
+zp_mux_out[0]            5        1      6         
+zp_mux_out[1]            5        1      6         
+zp_mux_out[2]            5        1      6         
+zp_mux_out[3]            5        1      6         
+zp_mux_out[4]            5        1      6         
+zp_mux_out[5]            5        1      6         
+zp_mux_out[6]            5        1      6         
+zp_mux_out[7]            5        1      6         
+zp_ram_addr[0]           6        1      7         
+zp_ram_addr[1]           5        1      6         
+zp_ram_addr[2]           4        1      5         
+zp_ram_addr[3]           4        1      5         
+zp_ram_addr[4]           9        1     10         
+zp_ram_addr[5]           4        1      5         
+zp_ram_addr[6]           3        1      4         
+zp_serial_out            3        1      4         
+
+Attributes
+    d - user dont_touch
+    D - derived dont_touch
+
+--------------------------------------------------------------------------------
+Total 176 nets        3850      173   4023
+Maximum               3250        1   3251
+Average              21.88     0.98   22.86
+1

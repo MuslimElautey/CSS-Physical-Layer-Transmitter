@@ -7,8 +7,7 @@ module sm_ram (
     input   [3:0] data_in,   
     
     // Read Port 
-    input         en_r,      
-    input   [7:0] rd_addr,   
+    input       [7:0] rd_addr,   
     output reg  [3:0] data_out   
 );
 
@@ -24,9 +23,7 @@ module sm_ram (
 
     // Synchronous Read
     always @(posedge clk) begin
-        if (en_r) begin
-            data_out <= mem[rd_addr];
-        end
+        data_out <= mem[rd_addr];
     end
 
 endmodule

@@ -9,11 +9,13 @@ module form_ppdu #(
     input [DATA_WIDTH-1:0]I_data,Q_data,
     input [ADDR_WIDTH-1:0]rom_addr,
     output I,Q,
-    output Ivalid,Qvalid //set as high when I,Q updated and ready for transmission
+    output IQ_valid //set as high when I,Q updated and ready for transmission
 );
 
     wire [DATA_WIDTH-1:0]I_mux_out,Q_mux_out,rom_out;
-
+    wire Ivalid , Qvalid;
+    
+    assign IQ_valid = Ivalid && Qvalid ;
     mux2x1 #(.DATA_WIDTH(DATA_WIDTH)) I_mux (.in0(I_data),.in1(rom_out),.sel(sel),.out(I_mux_out));
     mux2x1 #(.DATA_WIDTH(DATA_WIDTH)) Q_mux (.in0(Q_data),.in1(rom_out),.sel(sel),.out(Q_mux_out));
 

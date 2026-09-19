@@ -1,0 +1,89 @@
+Loading db file '/home/ICer/Downloads/Lib/synopsys/models/saed90nm_max.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : zigbee_phy_tx
+Version: O-2018.06-SP1
+Date   : Thu Sep 17 02:34:48 2026
+****************************************
+
+
+Library(s) Used:
+
+    saed90nm_max (File: /home/ICer/Downloads/Lib/synopsys/models/saed90nm_max.db)
+
+
+Operating Conditions: WORST   Library: saed90nm_max
+Wire Load Model Mode: enclosed
+
+Design        Wire Load Model            Library
+------------------------------------------------
+zigbee_phy_tx          ForQA             saed90nm_max
+master_ctrl_fsm        8000              saed90nm_max
+payload_ram            70000             saed90nm_max
+mux2x1_DATA_WIDTH8     ForQA             saed90nm_max
+zero_padder            8000              saed90nm_max
+demux                  8000              saed90nm_max
+symbol_mapper_0        8000              saed90nm_max
+symbol_mapper_1        8000              saed90nm_max
+sm_ram_0               70000             saed90nm_max
+sm_ram_1               70000             saed90nm_max
+form_ppdu_DATA_WIDTH4_ADDR_WIDTH4
+                       8000              saed90nm_max
+qpsk_dqpsk_chirp_top   8000              saed90nm_max
+master_ctrl_fsm_DW01_inc_0
+                       ForQA             saed90nm_max
+zero_padder_DW01_inc_0 ForQA             saed90nm_max
+symbol_mapper_0_DW01_inc_0
+                       ForQA             saed90nm_max
+symbol_mapper_1_DW01_inc_0
+                       ForQA             saed90nm_max
+mux2x1_DATA_WIDTH4_0   ForQA             saed90nm_max
+preamble_sfd_rom_ADDR_WIDTH4_DATA_WIDTH4
+                       ForQA             saed90nm_max
+piso_DATA_WIDTH4_0     8000              saed90nm_max
+piso_DATA_WIDTH4_1     8000              saed90nm_max
+qpsk_mapper            ForQA             saed90nm_max
+dqpsk_encoder          8000              saed90nm_max
+chirp_modulation       8000              saed90nm_max
+chirp_modulation_DW01_add_0
+                       8000              saed90nm_max
+chirp_modulation_DW01_sub_0
+                       8000              saed90nm_max
+mux2x1_DATA_WIDTH4_1   ForQA             saed90nm_max
+
+
+Global Operating Voltage = 0.7  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+  Cell Internal Power  =  32.6815 uW   (86%)
+  Net Switching Power  =   5.1920 uW   (14%)
+                         ---------
+Total Dynamic Power    =  37.8735 uW  (100%)
+
+Cell Leakage Power     = 751.8443 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register          16.1187            0.2652        2.6543e+08          281.8112  (  35.69%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational     16.5632            4.9268        4.8642e+08          507.9071  (  64.31%)
+--------------------------------------------------------------------------------------------------
+Total             32.6819 uW         5.1920 uW     7.5184e+08 pW       789.7183 uW
+1

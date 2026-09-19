@@ -1,0 +1,12 @@
+****************************************************
+
+Info:  Net imp:/WORK/chirp_modulation_DW01_add_0/CO is undriven.
+Info:  Net imp:/WORK/chirp_modulation_DW01_sub_0/CO is undriven.
+Info:  guide_uniquify 67 (Line: 595)  Cannot find object "u_sm_ram_Q/C2381" in design 'zigbee_phy_tx'.
+Info:  guide_uniquify 67 (Line: 595)  Cannot find object "u_sm_ram_I/C2381" in design 'zigbee_phy_tx'.
+Info:  guide_uniquify 77 (Line: 717)  Cannot find object "u_mod_top/u_chirp/dp_cluster_0/mult_558" in design 'zigbee_phy_tx'.
+Info:  Pre-verification of ref:/WORK/chirp_modulation/mult_558 SUCCEEDED.
+****************************************************
+
+****************************************************
+

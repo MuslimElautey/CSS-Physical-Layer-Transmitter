@@ -1,0 +1,19 @@
+****************************************
+Report : clock
+Design : zigbee_phy_tx
+Mode   : default
+Version: O-2018.06-SP1
+Date   : Thu Sep 17 22:37:43 2026
+****************************************
+
+
+Attributes:
+    p - Propagated clock
+    G - Generated  clock
+    U - Unexpanded generated clock
+
+Clock          Period   Waveform            Attrs     Sources
+--------------------------------------------------------------------------------
+clk             31.25   {0 15.625}                    {clk}
+
+1

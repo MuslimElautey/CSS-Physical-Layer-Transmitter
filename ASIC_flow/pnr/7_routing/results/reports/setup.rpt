@@ -1,0 +1,658 @@
+****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 10
+        -report_by design
+        -transition_time
+        -capacitance
+Design : zigbee_phy_tx
+Version: O-2018.06-SP1
+Date   : Fri Sep 18 16:21:29 2026
+****************************************
+Information: Timer using 'SI, Timing Window Analysis, CRPR'. (TIM-050)
+
+  Startpoint: u_mod_top/u_chirp/subchirp_idx_reg[1] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_mod_top/u_chirp/Tx_imag_reg[7] (rising edge-triggered flip-flop clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: clk
+  Path Type: max
+
+  Point                                            Cap      Trans      Incr      Path  
+  --------------------------------------------------------------------------------------------
+  clock clk (rise edge)                                                0.00      0.00
+  clock network delay (propagated)                                     2.67      2.67
+
+  u_mod_top/u_chirp/subchirp_idx_reg[1]/CLK (DFFX1)          0.16      0.00      2.67 r
+  u_mod_top/u_chirp/subchirp_idx_reg[1]/Q (DFFX1)
+                                                  31.28      0.37      0.78      3.45 r
+  u_mod_top/u_chirp/U489/ZN (INVX0)                4.45      0.18      0.18      3.63 f
+  u_mod_top/u_chirp/U536/QN (NOR2X0)              12.96      0.49      0.27      3.90 r
+  u_mod_top/u_chirp/U535/Q (AO21X1)                9.77      0.20      0.37      4.27 r
+  u_mod_top/u_chirp/add_558/U1_2/CO (FADDX1)       9.12      0.20      0.40      4.67 r
+  u_mod_top/u_chirp/add_558/U1_3/CO (FADDX1)       7.77      0.19      0.36      5.03 r
+  u_mod_top/u_chirp/add_558/U1_4/CO (FADDX1)       7.89      0.19      0.36      5.38 r
+  u_mod_top/u_chirp/add_558/U1_5/CO (FADDX1)       7.39      0.19      0.35      5.74 r
+  u_mod_top/u_chirp/U530/Q (AND2X1)               10.53      0.18      0.27      6.01 r
+  u_mod_top/u_chirp/U225/QN (NOR2X0)               6.15      0.23      0.18      6.19 f
+  u_mod_top/u_chirp/U169/ZN (INVX0)                9.82      0.28      0.19      6.38 r
+  u_mod_top/u_chirp/U158/QN (NOR2X0)               5.70      0.23      0.20      6.57 f
+  u_mod_top/u_chirp/U11/QN (NAND2X1)              28.66      0.49      0.29      6.86 r
+  u_mod_top/u_chirp/PLACE_HFSINV_985_1193/ZN (INVX0)
+                                                  18.59      0.38      0.36      7.22 f
+  u_mod_top/u_chirp/U95/QN (NAND2X0)               6.32      0.36      0.27      7.49 r
+  u_mod_top/u_chirp/U358/QN (NAND4X0)             17.17      0.57      0.43      7.92 f
+  u_mod_top/u_chirp/U62/QN (NOR4X0)                5.09      0.55      0.42      8.34 r
+  u_mod_top/u_chirp/U26/ZN (INVX0)                 8.00      0.28      0.30      8.64 f
+  u_mod_top/u_chirp/U60/QN (NOR4X0)                3.21      0.45      0.32      8.96 r
+  u_mod_top/u_chirp/U324/Q (AND4X1)                9.20      0.24      0.52      9.48 r
+  u_mod_top/u_chirp/U319/QN (NAND4X0)             23.42      0.71      0.47      9.95 f
+  u_mod_top/u_chirp/U59/ZN (INVX0)                 6.82      0.37      0.29     10.24 r
+  u_mod_top/u_chirp/U529/Q (XOR2X1)                4.29      0.14      0.35     10.59 f
+  u_mod_top/u_chirp/U293/Q (AO22X1)               16.49      0.23      0.40     10.99 f
+  u_mod_top/u_chirp/add_570/U1_1/CO (FADDX1)      14.83      0.22      0.47     11.46 f
+  u_mod_top/u_chirp/add_570/U1_2/CO (FADDX1)      16.25      0.23      0.44     11.90 f
+  u_mod_top/u_chirp/add_570/U1_3/CO (FADDX1)      13.89      0.21      0.43     12.33 f
+  u_mod_top/u_chirp/add_570/U1_4/CO (FADDX1)       7.41      0.16      0.39     12.73 f
+  u_mod_top/u_chirp/add_570/U1_5/CO (FADDX1)       9.27      0.18      0.39     13.11 f
+  u_mod_top/u_chirp/add_570/U1_6/CO (FADDX1)      12.38      0.20      0.41     13.52 f
+  u_mod_top/u_chirp/add_570/U1_7/Q (XOR3X1)        9.89      0.22      0.33     13.85 r
+  u_mod_top/u_chirp/U266/Q (AO22X1)                3.07      0.13      0.28     14.13 r
+  u_mod_top/u_chirp/Tx_imag_reg[7]/D (DFFX1)                 0.13      0.00     14.13 r
+  data arrival time                                                             14.13
+
+  clock clk (rise edge)                                               31.25     31.25
+  clock network delay (propagated)                                     2.51     33.76
+  clock reconvergence pessimism                                        0.05     33.81
+  u_mod_top/u_chirp/Tx_imag_reg[7]/CLK (DFFX1)               0.15      0.00     33.81 r
+  clock uncertainty                                                   -1.25     32.56
+  library setup time                                                  -0.22     32.35
+  data required time                                                            32.35
+  --------------------------------------------------------------------------------------------
+  data required time                                                            32.35
+  data arrival time                                                            -14.13
+  --------------------------------------------------------------------------------------------
+  slack (MET)                                                                   18.22
+
+
+
+  Startpoint: u_mod_top/u_chirp/subchirp_idx_reg[1] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_mod_top/u_chirp/Tx_imag_reg[6] (rising edge-triggered flip-flop clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: clk
+  Path Type: max
+
+  Point                                            Cap      Trans      Incr      Path  
+  --------------------------------------------------------------------------------------------
+  clock clk (rise edge)                                                0.00      0.00
+  clock network delay (propagated)                                     2.67      2.67
+
+  u_mod_top/u_chirp/subchirp_idx_reg[1]/CLK (DFFX1)          0.16      0.00      2.67 r
+  u_mod_top/u_chirp/subchirp_idx_reg[1]/Q (DFFX1)
+                                                  31.28      0.37      0.78      3.45 r
+  u_mod_top/u_chirp/U489/ZN (INVX0)                4.45      0.18      0.18      3.63 f
+  u_mod_top/u_chirp/U536/QN (NOR2X0)              12.96      0.49      0.27      3.90 r
+  u_mod_top/u_chirp/U535/Q (AO21X1)                9.77      0.20      0.37      4.27 r
+  u_mod_top/u_chirp/add_558/U1_2/CO (FADDX1)       9.12      0.20      0.40      4.67 r
+  u_mod_top/u_chirp/add_558/U1_3/CO (FADDX1)       7.77      0.19      0.36      5.03 r
+  u_mod_top/u_chirp/add_558/U1_4/CO (FADDX1)       7.89      0.19      0.36      5.38 r
+  u_mod_top/u_chirp/add_558/U1_5/CO (FADDX1)       7.39      0.19      0.35      5.74 r
+  u_mod_top/u_chirp/U530/Q (AND2X1)               10.53      0.18      0.27      6.01 r
+  u_mod_top/u_chirp/U225/QN (NOR2X0)               6.15      0.23      0.18      6.19 f
+  u_mod_top/u_chirp/U169/ZN (INVX0)                9.82      0.28      0.19      6.38 r
+  u_mod_top/u_chirp/U158/QN (NOR2X0)               5.70      0.23      0.20      6.57 f
+  u_mod_top/u_chirp/U11/QN (NAND2X1)              28.66      0.49      0.29      6.86 r
+  u_mod_top/u_chirp/PLACE_HFSINV_985_1193/ZN (INVX0)
+                                                  18.59      0.38      0.36      7.22 f
+  u_mod_top/u_chirp/U95/QN (NAND2X0)               6.32      0.36      0.27      7.49 r
+  u_mod_top/u_chirp/U358/QN (NAND4X0)             17.17      0.57      0.43      7.92 f
+  u_mod_top/u_chirp/U62/QN (NOR4X0)                5.09      0.55      0.42      8.34 r
+  u_mod_top/u_chirp/U26/ZN (INVX0)                 8.00      0.28      0.30      8.64 f
+  u_mod_top/u_chirp/U60/QN (NOR4X0)                3.21      0.45      0.32      8.96 r
+  u_mod_top/u_chirp/U324/Q (AND4X1)                9.20      0.24      0.52      9.48 r
+  u_mod_top/u_chirp/U319/QN (NAND4X0)             23.42      0.71      0.47      9.95 f
+  u_mod_top/u_chirp/U59/ZN (INVX0)                 6.82      0.37      0.29     10.24 r
+  u_mod_top/u_chirp/U529/Q (XOR2X1)                4.29      0.14      0.35     10.59 f
+  u_mod_top/u_chirp/U293/Q (AO22X1)               16.49      0.23      0.40     10.99 f
+  u_mod_top/u_chirp/add_570/U1_1/CO (FADDX1)      14.83      0.22      0.47     11.46 f
+  u_mod_top/u_chirp/add_570/U1_2/CO (FADDX1)      16.25      0.23      0.44     11.90 f
+  u_mod_top/u_chirp/add_570/U1_3/CO (FADDX1)      13.89      0.21      0.43     12.33 f
+  u_mod_top/u_chirp/add_570/U1_4/CO (FADDX1)       7.41      0.16      0.39     12.73 f
+  u_mod_top/u_chirp/add_570/U1_5/CO (FADDX1)       9.27      0.18      0.39     13.11 f
+  u_mod_top/u_chirp/add_570/U1_6/S (FADDX1)        4.93      0.16      0.42     13.54 f
+  u_mod_top/u_chirp/U267/Q (AO22X1)                3.49      0.13      0.28     13.81 f
+  u_mod_top/u_chirp/Tx_imag_reg[6]/D (DFFX1)                 0.13      0.01     13.82 f
+  data arrival time                                                             13.82
+
+  clock clk (rise edge)                                               31.25     31.25
+  clock network delay (propagated)                                     2.51     33.76
+  clock reconvergence pessimism                                        0.05     33.81
+  u_mod_top/u_chirp/Tx_imag_reg[6]/CLK (DFFX1)               0.15      0.00     33.81 r
+  clock uncertainty                                                   -1.25     32.56
+  library setup time                                                  -0.12     32.45
+  data required time                                                            32.45
+  --------------------------------------------------------------------------------------------
+  data required time                                                            32.45
+  data arrival time                                                            -13.82
+  --------------------------------------------------------------------------------------------
+  slack (MET)                                                                   18.63
+
+
+
+  Startpoint: u_mod_top/u_chirp/subchirp_idx_reg[1] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_mod_top/u_chirp/Tx_real_reg[7] (rising edge-triggered flip-flop clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: clk
+  Path Type: max
+
+  Point                                            Cap      Trans      Incr      Path  
+  --------------------------------------------------------------------------------------------
+  clock clk (rise edge)                                                0.00      0.00
+  clock network delay (propagated)                                     2.67      2.67
+
+  u_mod_top/u_chirp/subchirp_idx_reg[1]/CLK (DFFX1)          0.16      0.00      2.67 r
+  u_mod_top/u_chirp/subchirp_idx_reg[1]/Q (DFFX1)
+                                                  31.28      0.37      0.78      3.45 r
+  u_mod_top/u_chirp/U489/ZN (INVX0)                4.45      0.18      0.18      3.63 f
+  u_mod_top/u_chirp/U536/QN (NOR2X0)              12.96      0.49      0.27      3.90 r
+  u_mod_top/u_chirp/U535/Q (AO21X1)                9.77      0.20      0.37      4.27 r
+  u_mod_top/u_chirp/add_558/U1_2/CO (FADDX1)       9.12      0.20      0.40      4.67 r
+  u_mod_top/u_chirp/add_558/U1_3/CO (FADDX1)       7.77      0.19      0.36      5.03 r
+  u_mod_top/u_chirp/add_558/U1_4/CO (FADDX1)       7.89      0.19      0.36      5.38 r
+  u_mod_top/u_chirp/add_558/U1_5/CO (FADDX1)       7.39      0.19      0.35      5.74 r
+  u_mod_top/u_chirp/U530/Q (AND2X1)               10.53      0.18      0.27      6.01 r
+  u_mod_top/u_chirp/U225/QN (NOR2X0)               6.15      0.23      0.18      6.19 f
+  u_mod_top/u_chirp/U169/ZN (INVX0)                9.82      0.28      0.19      6.38 r
+  u_mod_top/u_chirp/U158/QN (NOR2X0)               5.70      0.23      0.20      6.57 f
+  u_mod_top/u_chirp/U11/QN (NAND2X1)              28.66      0.49      0.29      6.86 r
+  u_mod_top/u_chirp/PLACE_HFSINV_985_1193/ZN (INVX0)
+                                                  18.59      0.38      0.36      7.22 f
+  u_mod_top/u_chirp/U95/QN (NAND2X0)               6.32      0.36      0.27      7.49 r
+  u_mod_top/u_chirp/U358/QN (NAND4X0)             17.17      0.57      0.43      7.92 f
+  u_mod_top/u_chirp/U62/QN (NOR4X0)                5.09      0.55      0.42      8.34 r
+  u_mod_top/u_chirp/U26/ZN (INVX0)                 8.00      0.28      0.30      8.64 f
+  u_mod_top/u_chirp/U60/QN (NOR4X0)                3.21      0.45      0.32      8.96 r
+  u_mod_top/u_chirp/U324/Q (AND4X1)                9.20      0.24      0.52      9.48 r
+  u_mod_top/u_chirp/U319/QN (NAND4X0)             23.42      0.71      0.47      9.95 f
+  u_mod_top/u_chirp/U59/ZN (INVX0)                 6.82      0.37      0.29     10.24 r
+  u_mod_top/u_chirp/U529/Q (XOR2X1)                4.29      0.14      0.35     10.59 f
+  u_mod_top/u_chirp/U286/Q (AO22X1)               10.82      0.19      0.37     10.96 f
+  u_mod_top/u_chirp/sub_569/U2_1/CO (FADDX1)      10.44      0.19      0.42     11.38 f
+  u_mod_top/u_chirp/sub_569/U2_2/CO (FADDX1)      10.82      0.19      0.40     11.78 f
+  u_mod_top/u_chirp/sub_569/U2_3/CO (FADDX1)       8.48      0.17      0.39     12.17 f
+  u_mod_top/u_chirp/sub_569/U2_4/CO (FADDX1)       8.11      0.17      0.38     12.55 f
+  u_mod_top/u_chirp/sub_569/U2_5/CO (FADDX1)       9.10      0.18      0.39     12.94 f
+  u_mod_top/u_chirp/sub_569/U2_6/CO (FADDX1)       3.17      0.13      0.35     13.29 f
+  u_mod_top/u_chirp/sub_569/U2_7/Q (XOR3X1)        3.98      0.16      0.25     13.54 r
+  u_mod_top/u_chirp/U274/Q (AO22X1)                2.31      0.13      0.25     13.79 r
+  u_mod_top/u_chirp/Tx_real_reg[7]/D (DFFX1)                 0.13      0.00     13.79 r
+  data arrival time                                                             13.79
+
+  clock clk (rise edge)                                               31.25     31.25
+  clock network delay (propagated)                                     2.66     33.91
+  clock reconvergence pessimism                                        0.05     33.96
+  u_mod_top/u_chirp/Tx_real_reg[7]/CLK (DFFX1)               0.17      0.00     33.96 r
+  clock uncertainty                                                   -1.25     32.71
+  library setup time                                                  -0.21     32.50
+  data required time                                                            32.50
+  --------------------------------------------------------------------------------------------
+  data required time                                                            32.50
+  data arrival time                                                            -13.79
+  --------------------------------------------------------------------------------------------
+  slack (MET)                                                                   18.71
+
+
+
+  Startpoint: u_mod_top/u_chirp/subchirp_idx_reg[1] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_mod_top/u_chirp/Tx_real_reg[6] (rising edge-triggered flip-flop clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: clk
+  Path Type: max
+
+  Point                                            Cap      Trans      Incr      Path  
+  --------------------------------------------------------------------------------------------
+  clock clk (rise edge)                                                0.00      0.00
+  clock network delay (propagated)                                     2.67      2.67
+
+  u_mod_top/u_chirp/subchirp_idx_reg[1]/CLK (DFFX1)          0.16      0.00      2.67 r
+  u_mod_top/u_chirp/subchirp_idx_reg[1]/Q (DFFX1)
+                                                  31.28      0.37      0.78      3.45 r
+  u_mod_top/u_chirp/U489/ZN (INVX0)                4.45      0.18      0.18      3.63 f
+  u_mod_top/u_chirp/U536/QN (NOR2X0)              12.96      0.49      0.27      3.90 r
+  u_mod_top/u_chirp/U535/Q (AO21X1)                9.77      0.20      0.37      4.27 r
+  u_mod_top/u_chirp/add_558/U1_2/CO (FADDX1)       9.12      0.20      0.40      4.67 r
+  u_mod_top/u_chirp/add_558/U1_3/CO (FADDX1)       7.77      0.19      0.36      5.03 r
+  u_mod_top/u_chirp/add_558/U1_4/CO (FADDX1)       7.89      0.19      0.36      5.38 r
+  u_mod_top/u_chirp/add_558/U1_5/CO (FADDX1)       7.39      0.19      0.35      5.74 r
+  u_mod_top/u_chirp/U530/Q (AND2X1)               10.53      0.18      0.27      6.01 r
+  u_mod_top/u_chirp/U225/QN (NOR2X0)               6.15      0.23      0.18      6.19 f
+  u_mod_top/u_chirp/U169/ZN (INVX0)                9.82      0.28      0.19      6.38 r
+  u_mod_top/u_chirp/U158/QN (NOR2X0)               5.70      0.23      0.20      6.57 f
+  u_mod_top/u_chirp/U11/QN (NAND2X1)              28.66      0.49      0.29      6.86 r
+  u_mod_top/u_chirp/PLACE_HFSINV_985_1193/ZN (INVX0)
+                                                  18.59      0.38      0.36      7.22 f
+  u_mod_top/u_chirp/U95/QN (NAND2X0)               6.32      0.36      0.27      7.49 r
+  u_mod_top/u_chirp/U358/QN (NAND4X0)             17.17      0.57      0.43      7.92 f
+  u_mod_top/u_chirp/U62/QN (NOR4X0)                5.09      0.55      0.42      8.34 r
+  u_mod_top/u_chirp/U26/ZN (INVX0)                 8.00      0.28      0.30      8.64 f
+  u_mod_top/u_chirp/U60/QN (NOR4X0)                3.21      0.45      0.32      8.96 r
+  u_mod_top/u_chirp/U324/Q (AND4X1)                9.20      0.24      0.52      9.48 r
+  u_mod_top/u_chirp/U319/QN (NAND4X0)             23.42      0.71      0.47      9.95 f
+  u_mod_top/u_chirp/U59/ZN (INVX0)                 6.82      0.37      0.29     10.24 r
+  u_mod_top/u_chirp/U529/Q (XOR2X1)                4.29      0.14      0.35     10.59 f
+  u_mod_top/u_chirp/U286/Q (AO22X1)               10.82      0.19      0.37     10.96 f
+  u_mod_top/u_chirp/sub_569/U2_1/CO (FADDX1)      10.44      0.19      0.42     11.38 f
+  u_mod_top/u_chirp/sub_569/U2_2/CO (FADDX1)      10.82      0.19      0.40     11.78 f
+  u_mod_top/u_chirp/sub_569/U2_3/CO (FADDX1)       8.48      0.17      0.39     12.17 f
+  u_mod_top/u_chirp/sub_569/U2_4/CO (FADDX1)       8.11      0.17      0.38     12.55 f
+  u_mod_top/u_chirp/sub_569/U2_5/CO (FADDX1)       9.10      0.18      0.39     12.94 f
+  u_mod_top/u_chirp/sub_569/U2_6/S (FADDX1)        3.70      0.15      0.41     13.35 f
+  u_mod_top/u_chirp/U275/Q (AO22X1)                2.73      0.12      0.27     13.62 f
+  u_mod_top/u_chirp/Tx_real_reg[6]/D (DFFX1)                 0.12      0.00     13.62 f
+  data arrival time                                                             13.62
+
+  clock clk (rise edge)                                               31.25     31.25
+  clock network delay (propagated)                                     2.65     33.90
+  clock reconvergence pessimism                                        0.05     33.95
+  u_mod_top/u_chirp/Tx_real_reg[6]/CLK (DFFX1)               0.16      0.00     33.95 r
+  clock uncertainty                                                   -1.25     32.70
+  library setup time                                                  -0.11     32.59
+  data required time                                                            32.59
+  --------------------------------------------------------------------------------------------
+  data required time                                                            32.59
+  data arrival time                                                            -13.62
+  --------------------------------------------------------------------------------------------
+  slack (MET)                                                                   18.97
+
+
+
+  Startpoint: u_zp/o_ram_address_reg[0] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_zp/latched_no_of_zeros_reg[2] (rising edge-triggered flip-flop clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: clk
+  Path Type: max
+
+  Point                                            Cap      Trans      Incr      Path  
+  --------------------------------------------------------------------------------------------
+  clock clk (rise edge)                                                0.00      0.00
+  clock network delay (propagated)                                     2.39      2.39
+
+  u_zp/o_ram_address_reg[0]/CLK (DFFX1)                      0.21      0.00      2.39 r
+  u_zp/o_ram_address_reg[0]/QN (DFFX1)             3.18      0.16      0.51      2.90 f
+  u_zp/U11/ZN (INVX0)                             31.32      0.69      0.36      3.26 r
+  u_payload_ram/U3194/QN (NAND2X0)                14.83      0.56      0.56      3.82 f
+  u_payload_ram/U3196/ZN (INVX0)                  51.32      1.15      0.77      4.59 r
+  u_payload_ram/U1870/Q (AND2X1)                  44.60      0.53      0.91      5.50 r
+  u_payload_ram/PLACE_HFSINV_2313_1353/ZN (INVX0)
+                                                   7.98      0.27      0.28      5.78 f
+  u_payload_ram/U187/Q (OR2X1)                     4.16      0.10      0.27      6.05 f
+  u_payload_ram/U2639/QN (NAND2X0)                18.19      0.62      0.32      6.37 r
+  u_payload_ram/U1590/QN (AOI221X1)                8.63      0.13      0.48      6.85 f
+  u_payload_ram/U3350/Q (AND4X1)                   2.81      0.13      0.30      7.15 f
+  u_payload_ram/U3537/Q (OA22X1)                   4.20      0.12      0.29      7.44 f
+  u_payload_ram/U3538/Q (OA221X1)                  3.78      0.13      0.29      7.72 f
+  u_payload_ram/U4195/QN (OAI22X1)                40.68      0.46      0.60      8.32 r
+  u_zp_mux/U17/QN (NAND2X1)                        4.28      0.25      0.25      8.57 f
+  u_zp_mux/U16/QN (NAND2X1)                       18.84      0.38      0.23      8.81 r
+  u_zp/U132/ZN (INVX0)                             5.47      0.19      0.23      9.04 f
+  u_zp/U58/Q (XOR2X1)                              5.14      0.14      0.31      9.34 f
+  u_zp/U180/QN (NOR2X0)                            6.11      0.31      0.17      9.51 r
+  u_zp/U251/Q (OR2X1)                              4.60      0.11      0.27      9.78 r
+  u_zp/U267/ZN (INVX0)                             5.57      0.12      0.11      9.89 f
+  u_zp/U55/Q (XNOR2X1)                             4.09      0.14      0.39     10.28 r
+  u_zp/U46/Q (XOR2X1)                             11.46      0.19      0.33     10.61 f
+  u_zp/U257/Q (OR2X1)                              4.83      0.10      0.24     10.84 f
+  u_zp/U248/Q (AO22X1)                             3.84      0.13      0.26     11.10 f
+  u_zp/U31/Q (XOR3X1)                              5.40      0.16      0.68     11.79 f
+  u_zp/U148/ZN (INVX0)                             5.48      0.18      0.12     11.91 r
+  u_zp/U163/Q (AO22X1)                             3.95      0.14      0.33     12.24 r
+  u_zp/U37/QN (NAND2X0)                            1.72      0.14      0.14     12.38 f
+  u_zp/U34/QN (NAND2X0)                           11.85      0.44      0.26     12.64 r
+  u_zp/U100/Q (AO22X1)                             3.07      0.14      0.40     13.04 r
+  u_zp/latched_no_of_zeros_reg[2]/D (DFFX1)                  0.14      0.01     13.05 r
+  data arrival time                                                             13.05
+
+  clock clk (rise edge)                                               31.25     31.25
+  clock network delay (propagated)                                     2.24     33.49
+  clock reconvergence pessimism                                        0.11     33.60
+  u_zp/latched_no_of_zeros_reg[2]/CLK (DFFX1)                0.13      0.00     33.60 r
+  clock uncertainty                                                   -1.25     32.35
+  library setup time                                                  -0.23     32.12
+  data required time                                                            32.12
+  --------------------------------------------------------------------------------------------
+  data required time                                                            32.12
+  data arrival time                                                            -13.05
+  --------------------------------------------------------------------------------------------
+  slack (MET)                                                                   19.07
+
+
+
+  Startpoint: u_mod_top/u_chirp/subchirp_idx_reg[1] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_mod_top/u_chirp/Tx_imag_reg[5] (rising edge-triggered flip-flop clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: clk
+  Path Type: max
+
+  Point                                            Cap      Trans      Incr      Path  
+  --------------------------------------------------------------------------------------------
+  clock clk (rise edge)                                                0.00      0.00
+  clock network delay (propagated)                                     2.67      2.67
+
+  u_mod_top/u_chirp/subchirp_idx_reg[1]/CLK (DFFX1)          0.16      0.00      2.67 r
+  u_mod_top/u_chirp/subchirp_idx_reg[1]/Q (DFFX1)
+                                                  31.28      0.37      0.78      3.45 r
+  u_mod_top/u_chirp/U489/ZN (INVX0)                4.45      0.18      0.18      3.63 f
+  u_mod_top/u_chirp/U536/QN (NOR2X0)              12.96      0.49      0.27      3.90 r
+  u_mod_top/u_chirp/U535/Q (AO21X1)                9.77      0.20      0.37      4.27 r
+  u_mod_top/u_chirp/add_558/U1_2/CO (FADDX1)       9.12      0.20      0.40      4.67 r
+  u_mod_top/u_chirp/add_558/U1_3/CO (FADDX1)       7.77      0.19      0.36      5.03 r
+  u_mod_top/u_chirp/add_558/U1_4/CO (FADDX1)       7.89      0.19      0.36      5.38 r
+  u_mod_top/u_chirp/add_558/U1_5/CO (FADDX1)       7.39      0.19      0.35      5.74 r
+  u_mod_top/u_chirp/U530/Q (AND2X1)               10.53      0.18      0.27      6.01 r
+  u_mod_top/u_chirp/U225/QN (NOR2X0)               6.15      0.23      0.18      6.19 f
+  u_mod_top/u_chirp/U169/ZN (INVX0)                9.82      0.28      0.19      6.38 r
+  u_mod_top/u_chirp/U158/QN (NOR2X0)               5.70      0.23      0.20      6.57 f
+  u_mod_top/u_chirp/U11/QN (NAND2X1)              28.66      0.49      0.29      6.86 r
+  u_mod_top/u_chirp/PLACE_HFSINV_985_1193/ZN (INVX0)
+                                                  18.59      0.38      0.36      7.22 f
+  u_mod_top/u_chirp/U95/QN (NAND2X0)               6.32      0.36      0.27      7.49 r
+  u_mod_top/u_chirp/U358/QN (NAND4X0)             17.17      0.57      0.43      7.92 f
+  u_mod_top/u_chirp/U62/QN (NOR4X0)                5.09      0.55      0.42      8.34 r
+  u_mod_top/u_chirp/U26/ZN (INVX0)                 8.00      0.28      0.30      8.64 f
+  u_mod_top/u_chirp/U60/QN (NOR4X0)                3.21      0.45      0.32      8.96 r
+  u_mod_top/u_chirp/U324/Q (AND4X1)                9.20      0.24      0.52      9.48 r
+  u_mod_top/u_chirp/U319/QN (NAND4X0)             23.42      0.71      0.47      9.95 f
+  u_mod_top/u_chirp/U59/ZN (INVX0)                 6.82      0.37      0.29     10.24 r
+  u_mod_top/u_chirp/U529/Q (XOR2X1)                4.29      0.14      0.35     10.59 f
+  u_mod_top/u_chirp/U293/Q (AO22X1)               16.49      0.23      0.40     10.99 f
+  u_mod_top/u_chirp/add_570/U1_1/CO (FADDX1)      14.83      0.22      0.47     11.46 f
+  u_mod_top/u_chirp/add_570/U1_2/CO (FADDX1)      16.25      0.23      0.44     11.90 f
+  u_mod_top/u_chirp/add_570/U1_3/CO (FADDX1)      13.89      0.21      0.43     12.33 f
+  u_mod_top/u_chirp/add_570/U1_4/CO (FADDX1)       7.41      0.16      0.39     12.73 f
+  u_mod_top/u_chirp/add_570/U1_5/S (FADDX1)       11.45      0.21      0.47     13.19 f
+  u_mod_top/u_chirp/U268/Q (AO22X1)                2.36      0.12      0.28     13.47 f
+  u_mod_top/u_chirp/Tx_imag_reg[5]/D (DFFX1)                 0.12      0.00     13.47 f
+  data arrival time                                                             13.47
+
+  clock clk (rise edge)                                               31.25     31.25
+  clock network delay (propagated)                                     2.55     33.80
+  clock reconvergence pessimism                                        0.12     33.92
+  u_mod_top/u_chirp/Tx_imag_reg[5]/CLK (DFFX1)               0.15      0.00     33.92 r
+  clock uncertainty                                                   -1.25     32.67
+  library setup time                                                  -0.11     32.55
+  data required time                                                            32.55
+  --------------------------------------------------------------------------------------------
+  data required time                                                            32.55
+  data arrival time                                                            -13.47
+  --------------------------------------------------------------------------------------------
+  slack (MET)                                                                   19.08
+
+
+
+  Startpoint: u_zp/o_ram_address_reg[0] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_zp/latched_no_of_zeros_reg[1] (rising edge-triggered flip-flop clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: clk
+  Path Type: max
+
+  Point                                            Cap      Trans      Incr      Path  
+  --------------------------------------------------------------------------------------------
+  clock clk (rise edge)                                                0.00      0.00
+  clock network delay (propagated)                                     2.39      2.39
+
+  u_zp/o_ram_address_reg[0]/CLK (DFFX1)                      0.21      0.00      2.39 r
+  u_zp/o_ram_address_reg[0]/QN (DFFX1)             3.18      0.16      0.51      2.90 f
+  u_zp/U11/ZN (INVX0)                             31.32      0.69      0.36      3.26 r
+  u_payload_ram/U3194/QN (NAND2X0)                14.83      0.56      0.56      3.82 f
+  u_payload_ram/U3196/ZN (INVX0)                  51.32      1.15      0.77      4.59 r
+  u_payload_ram/U1870/Q (AND2X1)                  44.60      0.53      0.91      5.50 r
+  u_payload_ram/PLACE_HFSINV_2313_1353/ZN (INVX0)
+                                                   7.98      0.27      0.28      5.78 f
+  u_payload_ram/U187/Q (OR2X1)                     4.16      0.10      0.27      6.05 f
+  u_payload_ram/U2639/QN (NAND2X0)                18.19      0.62      0.32      6.37 r
+  u_payload_ram/U1590/QN (AOI221X1)                8.63      0.13      0.48      6.85 f
+  u_payload_ram/U3350/Q (AND4X1)                   2.81      0.13      0.30      7.15 f
+  u_payload_ram/U3537/Q (OA22X1)                   4.20      0.12      0.29      7.44 f
+  u_payload_ram/U3538/Q (OA221X1)                  3.78      0.13      0.29      7.72 f
+  u_payload_ram/U4195/QN (OAI22X1)                40.68      0.46      0.60      8.32 r
+  u_zp_mux/U17/QN (NAND2X1)                        4.28      0.25      0.25      8.57 f
+  u_zp_mux/U16/QN (NAND2X1)                       18.84      0.38      0.23      8.81 r
+  u_zp/U132/ZN (INVX0)                             5.47      0.19      0.23      9.04 f
+  u_zp/U58/Q (XOR2X1)                              5.14      0.14      0.31      9.34 f
+  u_zp/U180/QN (NOR2X0)                            6.11      0.31      0.17      9.51 r
+  u_zp/U249/ZN (INVX0)                             4.03      0.15      0.18      9.69 f
+  u_zp/U270/QN (NAND2X0)                           1.88      0.21      0.12      9.82 r
+  u_zp/U265/QN (NAND2X0)                           4.69      0.22      0.21     10.03 f
+  u_zp/U158/Q (AND2X1)                             3.03      0.09      0.23     10.26 f
+  u_zp/U167/Q (OR2X1)                              4.34      0.10      0.20     10.46 f
+  u_zp/U264/QN (NAND2X0)                           4.90      0.25      0.15     10.62 r
+  u_zp/U263/Q (OR2X1)                              2.01      0.09      0.24     10.86 r
+  u_zp/U162/QN (NAND2X0)                           3.25      0.18      0.13     10.99 f
+  u_zp/U47/QN (NAND2X1)                            4.43      0.18      0.12     11.10 r
+  u_zp/U145/Q (XOR3X1)                             9.48      0.19      0.34     11.44 f
+  u_zp/U177/Q (XOR3X1)                             4.76      0.15      0.70     12.14 f
+  u_zp/U202/QN (NOR2X0)                            2.72      0.20      0.13     12.27 r
+  u_zp/U99/Q (AO22X1)                             12.45      0.22      0.36     12.63 r
+  u_zp/U98/Q (AO22X1)                              2.75      0.14      0.27     12.90 r
+  u_zp/latched_no_of_zeros_reg[1]/D (DFFX1)                  0.14      0.00     12.90 r
+  data arrival time                                                             12.90
+
+  clock clk (rise edge)                                               31.25     31.25
+  clock network delay (propagated)                                     2.26     33.51
+  clock reconvergence pessimism                                        0.10     33.61
+  u_zp/latched_no_of_zeros_reg[1]/CLK (DFFX1)                0.16      0.00     33.61 r
+  clock uncertainty                                                   -1.25     32.36
+  library setup time                                                  -0.22     32.14
+  data required time                                                            32.14
+  --------------------------------------------------------------------------------------------
+  data required time                                                            32.14
+  data arrival time                                                            -12.90
+  --------------------------------------------------------------------------------------------
+  slack (MET)                                                                   19.24
+
+
+
+  Startpoint: u_mod_top/u_chirp/subchirp_idx_reg[1] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_mod_top/u_chirp/Tx_real_reg[5] (rising edge-triggered flip-flop clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: clk
+  Path Type: max
+
+  Point                                            Cap      Trans      Incr      Path  
+  --------------------------------------------------------------------------------------------
+  clock clk (rise edge)                                                0.00      0.00
+  clock network delay (propagated)                                     2.67      2.67
+
+  u_mod_top/u_chirp/subchirp_idx_reg[1]/CLK (DFFX1)          0.16      0.00      2.67 r
+  u_mod_top/u_chirp/subchirp_idx_reg[1]/Q (DFFX1)
+                                                  31.28      0.37      0.78      3.45 r
+  u_mod_top/u_chirp/U489/ZN (INVX0)                4.45      0.18      0.18      3.63 f
+  u_mod_top/u_chirp/U536/QN (NOR2X0)              12.96      0.49      0.27      3.90 r
+  u_mod_top/u_chirp/U535/Q (AO21X1)                9.77      0.20      0.37      4.27 r
+  u_mod_top/u_chirp/add_558/U1_2/CO (FADDX1)       9.12      0.20      0.40      4.67 r
+  u_mod_top/u_chirp/add_558/U1_3/CO (FADDX1)       7.77      0.19      0.36      5.03 r
+  u_mod_top/u_chirp/add_558/U1_4/CO (FADDX1)       7.89      0.19      0.36      5.38 r
+  u_mod_top/u_chirp/add_558/U1_5/CO (FADDX1)       7.39      0.19      0.35      5.74 r
+  u_mod_top/u_chirp/U530/Q (AND2X1)               10.53      0.18      0.27      6.01 r
+  u_mod_top/u_chirp/U225/QN (NOR2X0)               6.15      0.23      0.18      6.19 f
+  u_mod_top/u_chirp/U169/ZN (INVX0)                9.82      0.28      0.19      6.38 r
+  u_mod_top/u_chirp/U158/QN (NOR2X0)               5.70      0.23      0.20      6.57 f
+  u_mod_top/u_chirp/U11/QN (NAND2X1)              28.66      0.49      0.29      6.86 r
+  u_mod_top/u_chirp/PLACE_HFSINV_985_1193/ZN (INVX0)
+                                                  18.59      0.38      0.36      7.22 f
+  u_mod_top/u_chirp/U95/QN (NAND2X0)               6.32      0.36      0.27      7.49 r
+  u_mod_top/u_chirp/U358/QN (NAND4X0)             17.17      0.57      0.43      7.92 f
+  u_mod_top/u_chirp/U62/QN (NOR4X0)                5.09      0.55      0.42      8.34 r
+  u_mod_top/u_chirp/U26/ZN (INVX0)                 8.00      0.28      0.30      8.64 f
+  u_mod_top/u_chirp/U60/QN (NOR4X0)                3.21      0.45      0.32      8.96 r
+  u_mod_top/u_chirp/U324/Q (AND4X1)                9.20      0.24      0.52      9.48 r
+  u_mod_top/u_chirp/U319/QN (NAND4X0)             23.42      0.71      0.47      9.95 f
+  u_mod_top/u_chirp/U59/ZN (INVX0)                 6.82      0.37      0.29     10.24 r
+  u_mod_top/u_chirp/U529/Q (XOR2X1)                4.29      0.14      0.35     10.59 f
+  u_mod_top/u_chirp/U286/Q (AO22X1)               10.82      0.19      0.37     10.96 f
+  u_mod_top/u_chirp/sub_569/U2_1/CO (FADDX1)      10.44      0.19      0.42     11.38 f
+  u_mod_top/u_chirp/sub_569/U2_2/CO (FADDX1)      10.82      0.19      0.40     11.78 f
+  u_mod_top/u_chirp/sub_569/U2_3/CO (FADDX1)       8.48      0.17      0.39     12.17 f
+  u_mod_top/u_chirp/sub_569/U2_4/CO (FADDX1)       8.11      0.17      0.38     12.55 f
+  u_mod_top/u_chirp/sub_569/U2_5/S (FADDX1)        5.41      0.17      0.43     12.98 f
+  u_mod_top/u_chirp/U276/Q (AO22X1)                2.37      0.12      0.27     13.25 f
+  u_mod_top/u_chirp/Tx_real_reg[5]/D (DFFX1)                 0.12      0.00     13.25 f
+  data arrival time                                                             13.25
+
+  clock clk (rise edge)                                               31.25     31.25
+  clock network delay (propagated)                                     2.65     33.90
+  clock reconvergence pessimism                                        0.05     33.95
+  u_mod_top/u_chirp/Tx_real_reg[5]/CLK (DFFX1)               0.16      0.00     33.95 r
+  clock uncertainty                                                   -1.25     32.70
+  library setup time                                                  -0.11     32.59
+  data required time                                                            32.59
+  --------------------------------------------------------------------------------------------
+  data required time                                                            32.59
+  data arrival time                                                            -13.25
+  --------------------------------------------------------------------------------------------
+  slack (MET)                                                                   19.34
+
+
+
+  Startpoint: u_mod_top/u_chirp/subchirp_idx_reg[1] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_mod_top/u_chirp/Tx_imag_reg[4] (rising edge-triggered flip-flop clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: clk
+  Path Type: max
+
+  Point                                            Cap      Trans      Incr      Path  
+  --------------------------------------------------------------------------------------------
+  clock clk (rise edge)                                                0.00      0.00
+  clock network delay (propagated)                                     2.67      2.67
+
+  u_mod_top/u_chirp/subchirp_idx_reg[1]/CLK (DFFX1)          0.16      0.00      2.67 r
+  u_mod_top/u_chirp/subchirp_idx_reg[1]/Q (DFFX1)
+                                                  31.28      0.37      0.78      3.45 r
+  u_mod_top/u_chirp/U489/ZN (INVX0)                4.45      0.18      0.18      3.63 f
+  u_mod_top/u_chirp/U536/QN (NOR2X0)              12.96      0.49      0.27      3.90 r
+  u_mod_top/u_chirp/U535/Q (AO21X1)                9.77      0.20      0.37      4.27 r
+  u_mod_top/u_chirp/add_558/U1_2/CO (FADDX1)       9.12      0.20      0.40      4.67 r
+  u_mod_top/u_chirp/add_558/U1_3/CO (FADDX1)       7.77      0.19      0.36      5.03 r
+  u_mod_top/u_chirp/add_558/U1_4/CO (FADDX1)       7.89      0.19      0.36      5.38 r
+  u_mod_top/u_chirp/add_558/U1_5/CO (FADDX1)       7.39      0.19      0.35      5.74 r
+  u_mod_top/u_chirp/U530/Q (AND2X1)               10.53      0.18      0.27      6.01 r
+  u_mod_top/u_chirp/U225/QN (NOR2X0)               6.15      0.23      0.18      6.19 f
+  u_mod_top/u_chirp/U169/ZN (INVX0)                9.82      0.28      0.19      6.38 r
+  u_mod_top/u_chirp/U158/QN (NOR2X0)               5.70      0.23      0.20      6.57 f
+  u_mod_top/u_chirp/U11/QN (NAND2X1)              28.66      0.49      0.29      6.86 r
+  u_mod_top/u_chirp/PLACE_HFSINV_985_1193/ZN (INVX0)
+                                                  18.59      0.38      0.36      7.22 f
+  u_mod_top/u_chirp/U95/QN (NAND2X0)               6.32      0.36      0.27      7.49 r
+  u_mod_top/u_chirp/U358/QN (NAND4X0)             17.17      0.57      0.43      7.92 f
+  u_mod_top/u_chirp/U62/QN (NOR4X0)                5.09      0.55      0.42      8.34 r
+  u_mod_top/u_chirp/U26/ZN (INVX0)                 8.00      0.28      0.30      8.64 f
+  u_mod_top/u_chirp/U60/QN (NOR4X0)                3.21      0.45      0.32      8.96 r
+  u_mod_top/u_chirp/U324/Q (AND4X1)                9.20      0.24      0.52      9.48 r
+  u_mod_top/u_chirp/U319/QN (NAND4X0)             23.42      0.71      0.47      9.95 f
+  u_mod_top/u_chirp/U59/ZN (INVX0)                 6.82      0.37      0.29     10.24 r
+  u_mod_top/u_chirp/U529/Q (XOR2X1)                4.29      0.14      0.35     10.59 f
+  u_mod_top/u_chirp/U293/Q (AO22X1)               16.49      0.23      0.40     10.99 f
+  u_mod_top/u_chirp/add_570/U1_1/CO (FADDX1)      14.83      0.22      0.47     11.46 f
+  u_mod_top/u_chirp/add_570/U1_2/CO (FADDX1)      16.25      0.23      0.44     11.90 f
+  u_mod_top/u_chirp/add_570/U1_3/CO (FADDX1)      13.89      0.21      0.43     12.33 f
+  u_mod_top/u_chirp/add_570/U1_4/S (FADDX1)        6.36      0.18      0.45     12.78 f
+  u_mod_top/u_chirp/U269/Q (AO22X1)                2.91      0.12      0.28     13.06 f
+  u_mod_top/u_chirp/Tx_imag_reg[4]/D (DFFX1)                 0.12      0.00     13.06 f
+  data arrival time                                                             13.06
+
+  clock clk (rise edge)                                               31.25     31.25
+  clock network delay (propagated)                                     2.52     33.77
+  clock reconvergence pessimism                                        0.05     33.82
+  u_mod_top/u_chirp/Tx_imag_reg[4]/CLK (DFFX1)               0.15      0.00     33.82 r
+  clock uncertainty                                                   -1.25     32.57
+  library setup time                                                  -0.12     32.45
+  data required time                                                            32.45
+  --------------------------------------------------------------------------------------------
+  data required time                                                            32.45
+  data arrival time                                                            -13.06
+  --------------------------------------------------------------------------------------------
+  slack (MET)                                                                   19.39
+
+
+
+  Startpoint: u_mod_top/u_chirp/subchirp_idx_reg[1] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_mod_top/u_chirp/Tx_real_reg[4] (rising edge-triggered flip-flop clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: clk
+  Path Type: max
+
+  Point                                            Cap      Trans      Incr      Path  
+  --------------------------------------------------------------------------------------------
+  clock clk (rise edge)                                                0.00      0.00
+  clock network delay (propagated)                                     2.67      2.67
+
+  u_mod_top/u_chirp/subchirp_idx_reg[1]/CLK (DFFX1)          0.16      0.00      2.67 r
+  u_mod_top/u_chirp/subchirp_idx_reg[1]/Q (DFFX1)
+                                                  31.28      0.37      0.78      3.45 r
+  u_mod_top/u_chirp/U489/ZN (INVX0)                4.45      0.18      0.18      3.63 f
+  u_mod_top/u_chirp/U536/QN (NOR2X0)              12.96      0.49      0.27      3.90 r
+  u_mod_top/u_chirp/U535/Q (AO21X1)                9.77      0.20      0.37      4.27 r
+  u_mod_top/u_chirp/add_558/U1_2/CO (FADDX1)       9.12      0.20      0.40      4.67 r
+  u_mod_top/u_chirp/add_558/U1_3/CO (FADDX1)       7.77      0.19      0.36      5.03 r
+  u_mod_top/u_chirp/add_558/U1_4/CO (FADDX1)       7.89      0.19      0.36      5.38 r
+  u_mod_top/u_chirp/add_558/U1_5/CO (FADDX1)       7.39      0.19      0.35      5.74 r
+  u_mod_top/u_chirp/U530/Q (AND2X1)               10.53      0.18      0.27      6.01 r
+  u_mod_top/u_chirp/U225/QN (NOR2X0)               6.15      0.23      0.18      6.19 f
+  u_mod_top/u_chirp/U169/ZN (INVX0)                9.82      0.28      0.19      6.38 r
+  u_mod_top/u_chirp/U158/QN (NOR2X0)               5.70      0.23      0.20      6.57 f
+  u_mod_top/u_chirp/U11/QN (NAND2X1)              28.66      0.49      0.29      6.86 r
+  u_mod_top/u_chirp/PLACE_HFSINV_985_1193/ZN (INVX0)
+                                                  18.59      0.38      0.36      7.22 f
+  u_mod_top/u_chirp/U95/QN (NAND2X0)               6.32      0.36      0.27      7.49 r
+  u_mod_top/u_chirp/U358/QN (NAND4X0)             17.17      0.57      0.43      7.92 f
+  u_mod_top/u_chirp/U62/QN (NOR4X0)                5.09      0.55      0.42      8.34 r
+  u_mod_top/u_chirp/U26/ZN (INVX0)                 8.00      0.28      0.30      8.64 f
+  u_mod_top/u_chirp/U60/QN (NOR4X0)                3.21      0.45      0.32      8.96 r
+  u_mod_top/u_chirp/U324/Q (AND4X1)                9.20      0.24      0.52      9.48 r
+  u_mod_top/u_chirp/U319/QN (NAND4X0)             23.42      0.71      0.47      9.95 f
+  u_mod_top/u_chirp/U59/ZN (INVX0)                 6.82      0.37      0.29     10.24 r
+  u_mod_top/u_chirp/U529/Q (XOR2X1)                4.29      0.14      0.35     10.59 f
+  u_mod_top/u_chirp/U286/Q (AO22X1)               10.82      0.19      0.37     10.96 f
+  u_mod_top/u_chirp/sub_569/U2_1/CO (FADDX1)      10.44      0.19      0.42     11.38 f
+  u_mod_top/u_chirp/sub_569/U2_2/CO (FADDX1)      10.82      0.19      0.40     11.78 f
+  u_mod_top/u_chirp/sub_569/U2_3/CO (FADDX1)       8.48      0.17      0.39     12.17 f
+  u_mod_top/u_chirp/sub_569/U2_4/S (FADDX1)        4.71      0.16      0.42     12.59 f
+  u_mod_top/u_chirp/U277/Q (AO22X1)                2.17      0.11      0.28     12.87 f
+  u_mod_top/u_chirp/Tx_real_reg[4]/D (DFFX1)                 0.11      0.00     12.87 f
+  data arrival time                                                             12.87
+
+  clock clk (rise edge)                                               31.25     31.25
+  clock network delay (propagated)                                     2.52     33.77
+  clock reconvergence pessimism                                        0.05     33.82
+  u_mod_top/u_chirp/Tx_real_reg[4]/CLK (DFFX1)               0.16      0.00     33.82 r
+  clock uncertainty                                                   -1.25     32.57
+  library setup time                                                  -0.11     32.46
+  data required time                                                            32.46
+  --------------------------------------------------------------------------------------------
+  data required time                                                            32.46
+  data arrival time                                                            -12.87
+  --------------------------------------------------------------------------------------------
+  slack (MET)                                                                   19.59
+
+
+1

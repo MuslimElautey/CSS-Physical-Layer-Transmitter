@@ -1,0 +1,101 @@
+****************************************
+Report : cell
+Design : zigbee_phy_tx
+Version: O-2018.06-SP1
+Date   : Thu Sep 17 09:14:37 2026
+****************************************
+
+Attributes
+    b - black-box (unknown)
+    h - hierarchical
+    n - noncombinational
+    u - contains unmapped logic
+    E - extracted timing model
+    Q - Quick timing model
+    U - Unbound (missing)
+    s - user size_only
+    S - implicit size_only
+    d - user dont_touch
+    D - derived dont_touch
+    o - synthetic operator
+
+
+Cell                      Reference       Library          Attributes
+--------------------------------------------------------------------------------
+PLACE_HFSBUF_1192_1216    NBUFFX2         saed90nm_max_1   
+PLACE_HFSBUF_1518_374     NBUFFX2         saed90nm_max_1   
+PLACE_HFSBUF_5030_f_382   NBUFFX2         saed90nm_max_1   
+PLACE_HFSBUF_674_375      NBUFFX2         saed90nm_max_1   
+PLACE_HFSINV_182_426      INVX0           saed90nm_max_1   
+PLACE_HFSINV_268_1185     INVX0           saed90nm_max_1   
+PLACE_HFSINV_301_380      INVX1           saed90nm_max_1   
+PLACE_HFSINV_307_1189     INVX0           saed90nm_max_1   
+PLACE_HFSINV_3136_376     INVX2           saed90nm_max_1   
+PLACE_HFSINV_393_1191     INVX0           saed90nm_max_1   
+PLACE_HFSINV_4898_377     INVX8           saed90nm_max_1   
+PLACE_HFSINV_636_428      INVX0           saed90nm_max_1   
+PLACE_optlc_1375          TIEL            saed90nm_max_1   
+PLACE_optlc_1376          TIEL            saed90nm_max_1   
+PLACE_optlc_1378          TIEL            saed90nm_max_1   
+PLACE_optlc_1380          TIEL            saed90nm_max_1   
+PLACE_optlc_1382          TIEL            saed90nm_max_1   
+PLACE_optlc_1384          TIEL            saed90nm_max_1   
+PLACE_optlc_1385          TIEL            saed90nm_max_1   
+PLACE_optlc_1387          TIEL            saed90nm_max_1   
+PLACE_optlc_1389          TIEL            saed90nm_max_1   
+PLACE_optlc_1390          TIEL            saed90nm_max_1   
+PLACE_optlc_1391          TIEL            saed90nm_max_1   
+PLACE_optlc_1393          TIEL            saed90nm_max_1   
+PLACE_optlc_1395          TIEL            saed90nm_max_1   
+PLACE_optlc_1397          TIEL            saed90nm_max_1   
+PLACE_optlc_1398          TIEL            saed90nm_max_1   
+PLACE_optlc_1400          TIEL            saed90nm_max_1   
+PLACE_optlc_1401          TIEL            saed90nm_max_1   
+PLACE_optlc_1402          TIEL            saed90nm_max_1   
+PLACE_optlc_1403          TIEL            saed90nm_max_1   
+PLACE_optlc_1404          TIEL            saed90nm_max_1   
+PLACE_optlc_1405          TIEL            saed90nm_max_1   
+PLACE_optlc_1407          TIEL            saed90nm_max_1   
+PLACE_optlc_1409          TIEL            saed90nm_max_1   
+PLACE_optlc_1410          TIEL            saed90nm_max_1   
+PLACE_optlc_1412          TIEL            saed90nm_max_1   
+PLACE_optlc_1413          TIEL            saed90nm_max_1   
+PLACE_optlc_1414          TIEL            saed90nm_max_1   
+PLACE_optlc_1416          TIEL            saed90nm_max_1   
+PLACE_optlc_1417          TIEL            saed90nm_max_1   
+SpareCell_0               NAND2X1         saed90nm_max_1   d
+SpareCell_0_0             NOR2X1          saed90nm_max_1   d
+SpareCell_0_1             NOR2X1          saed90nm_max_1   d
+SpareCell_0_2             NOR2X1          saed90nm_max_1   d
+SpareCell_0_3             NOR2X1          saed90nm_max_1   d
+SpareCell_1               NAND2X1         saed90nm_max_1   d
+SpareCell_1_0             INVX1           saed90nm_max_1   d
+SpareCell_1_1             INVX1           saed90nm_max_1   d
+SpareCell_1_2             INVX1           saed90nm_max_1   d
+SpareCell_1_3             INVX1           saed90nm_max_1   d
+SpareCell_2               NAND2X1         saed90nm_max_1   d
+SpareCell_2_0             OR2X1           saed90nm_max_1   d
+SpareCell_2_1             OR2X1           saed90nm_max_1   d
+SpareCell_2_2             OR2X1           saed90nm_max_1   d
+SpareCell_2_3             OR2X1           saed90nm_max_1   d
+SpareCell_3               NAND2X1         saed90nm_max_1   d
+SpareCell_3_0             SDFFX1          saed90nm_max_1   n, d
+SpareCell_3_1             SDFFX1          saed90nm_max_1   n, d
+SpareCell_3_2             SDFFX1          saed90nm_max_1   n, d
+SpareCell_3_3             SDFFX1          saed90nm_max_1   n, d
+u_ctrl_fsm                master_ctrl_fsm                  h
+u_demux                   demux                            h
+u_form_ppdu               form_ppdu_DATA_WIDTH4_ADDR_WIDTH4
+                                                           h
+u_mod_top                 qpsk_dqpsk_chirp_top             h
+u_payload_ram             payload_ram                      h
+u_sm_I                    symbol_mapper_0                  h
+u_sm_Q                    symbol_mapper_1                  h
+u_sm_ram_I                sm_ram_0                         h
+u_sm_ram_Q                sm_ram_1                         h
+u_zp                      zero_padder                      h
+u_zp_mux                  mux2x1_DATA_WIDTH8               h
+--------------------------------------------------------------------------------
+Total 72 cells
+
+1

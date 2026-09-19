@@ -1,0 +1,542 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 10
+        -transition_time
+        -capacitance
+Design : zigbee_phy_tx
+Version: O-2018.06-SP1
+Date   : Thu Sep 17 02:34:47 2026
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: WORST   Library: saed90nm_max
+Wire Load Model Mode: enclosed
+
+  Startpoint: u_sm_I/wr_addr_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_sm_ram_I/mem_reg[227][3]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  zigbee_phy_tx      ForQA                 saed90nm_max
+  symbol_mapper_0    8000                  saed90nm_max
+  sm_ram_0           70000                 saed90nm_max
+
+  Point                                          Cap     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock clk (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  u_sm_I/wr_addr_reg[0]/CLK (DFFX2)                       0.00      0.00 #     0.00 r
+  u_sm_I/wr_addr_reg[0]/QN (DFFX2)              2.86      0.17      0.45       0.45 f
+  u_sm_I/U7/ZN (INVX1)                          9.75      0.17      0.19       0.64 r
+  u_sm_I/wr_addr[0] (symbol_mapper_0)                               0.00       0.64 r
+  u_sm_ram_I/wr_addr[0] (sm_ram_0)                                  0.00       0.64 r
+  u_sm_ram_I/U49/Q (AND2X1)                     5.42      0.13      1.43       2.06 r
+  u_sm_ram_I/U4108/Q (AND2X4)                   3.17      0.15      6.44       8.50 r
+  u_sm_ram_I/U319/Z (DELLN1X2)                  4.34      0.20      3.29      11.79 r
+  u_sm_ram_I/U58/ZN (INVX0)                     1.58      0.09      3.48      15.27 f
+  u_sm_ram_I/U59/ZN (INVX0)                     4.00      0.14      0.41      15.68 r
+  u_sm_ram_I/U3534/QN (NAND2X0)                 4.58      0.23      3.29      18.97 f
+  u_sm_ram_I/U3304/ZN (INVX0)                   5.67      0.21      3.71      22.68 r
+  u_sm_ram_I/U318/Q (AO22X2)                    1.43      0.14      6.75      29.43 r
+  u_sm_ram_I/mem_reg[227][3]/D (DFFX1)                    0.14      0.29      29.72 r
+  data arrival time                                                           29.72
+
+  clock clk (rise edge)                                            31.25      31.25
+  clock network delay (ideal)                                       0.00      31.25
+  clock uncertainty                                                -1.25      30.00
+  u_sm_ram_I/mem_reg[227][3]/CLK (DFFX1)                            0.00      30.00 r
+  library setup time                                               -0.28      29.72
+  data required time                                                          29.72
+  ------------------------------------------------------------------------------------
+  data required time                                                          29.72
+  data arrival time                                                          -29.72
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.00
+
+
+  Startpoint: u_sm_Q/wr_addr_reg[3]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_sm_ram_Q/mem_reg[157][1]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  zigbee_phy_tx      ForQA                 saed90nm_max
+  sm_ram_1           70000                 saed90nm_max
+
+  Point                                          Cap     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock clk (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  u_sm_Q/wr_addr_reg[3]/CLK (DFFX1)                       0.00      0.00 #     0.00 r
+  u_sm_Q/wr_addr_reg[3]/Q (DFFX1)               8.26      0.13      0.66       0.66 f
+  u_sm_Q/wr_addr[3] (symbol_mapper_1)                               0.00       0.66 f
+  u_sm_ram_Q/wr_addr[3] (sm_ram_1)                                  0.00       0.66 f
+  u_sm_ram_Q/U41/Q (AND2X1)                     5.32      0.11      0.98       1.64 f
+  u_sm_ram_Q/U4002/Q (AND2X4)                   4.25      0.13      6.33       7.97 f
+  u_sm_ram_Q/U449/Z (DELLN2X2)                  4.32      0.35      6.81      14.78 f
+  u_sm_ram_Q/U366/ZN (INVX0)                    1.64      0.16      3.46      18.25 r
+  u_sm_ram_Q/U386/ZN (INVX0)                    2.56      0.10      0.43      18.68 f
+  u_sm_ram_Q/U3430/QN (NAND2X0)                 3.27      0.20      1.33      20.01 r
+  u_sm_ram_Q/U2107/ZN (INVX0)                   1.58      0.09      1.64      21.65 f
+  u_sm_ram_Q/U2108/ZN (INVX0)                   6.25      0.18      0.43      22.08 r
+  u_sm_ram_Q/U468/Q (AO22X2)                    1.43      0.14      7.34      29.43 r
+  u_sm_ram_Q/mem_reg[157][1]/D (DFFX1)                    0.14      0.29      29.72 r
+  data arrival time                                                           29.72
+
+  clock clk (rise edge)                                            31.25      31.25
+  clock network delay (ideal)                                       0.00      31.25
+  clock uncertainty                                                -1.25      30.00
+  u_sm_ram_Q/mem_reg[157][1]/CLK (DFFX1)                            0.00      30.00 r
+  library setup time                                               -0.28      29.72
+  data required time                                                          29.72
+  ------------------------------------------------------------------------------------
+  data required time                                                          29.72
+  data arrival time                                                          -29.72
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.00
+
+
+  Startpoint: u_sm_Q/wr_addr_reg[3]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_sm_ram_Q/mem_reg[157][3]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  zigbee_phy_tx      ForQA                 saed90nm_max
+  sm_ram_1           70000                 saed90nm_max
+
+  Point                                          Cap     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock clk (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  u_sm_Q/wr_addr_reg[3]/CLK (DFFX1)                       0.00      0.00 #     0.00 r
+  u_sm_Q/wr_addr_reg[3]/Q (DFFX1)               8.26      0.13      0.66       0.66 f
+  u_sm_Q/wr_addr[3] (symbol_mapper_1)                               0.00       0.66 f
+  u_sm_ram_Q/wr_addr[3] (sm_ram_1)                                  0.00       0.66 f
+  u_sm_ram_Q/U41/Q (AND2X1)                     5.32      0.11      0.98       1.64 f
+  u_sm_ram_Q/U4002/Q (AND2X4)                   4.25      0.13      6.33       7.97 f
+  u_sm_ram_Q/U449/Z (DELLN2X2)                  4.32      0.35      6.81      14.78 f
+  u_sm_ram_Q/U366/ZN (INVX0)                    1.64      0.16      3.46      18.25 r
+  u_sm_ram_Q/U386/ZN (INVX0)                    2.56      0.10      0.43      18.68 f
+  u_sm_ram_Q/U3430/QN (NAND2X0)                 3.27      0.20      1.33      20.01 r
+  u_sm_ram_Q/U2107/ZN (INVX0)                   1.58      0.09      1.64      21.65 f
+  u_sm_ram_Q/U2108/ZN (INVX0)                   6.25      0.18      0.43      22.08 r
+  u_sm_ram_Q/U511/Q (AO22X2)                    1.43      0.14      7.34      29.43 r
+  u_sm_ram_Q/mem_reg[157][3]/D (DFFX1)                    0.14      0.29      29.72 r
+  data arrival time                                                           29.72
+
+  clock clk (rise edge)                                            31.25      31.25
+  clock network delay (ideal)                                       0.00      31.25
+  clock uncertainty                                                -1.25      30.00
+  u_sm_ram_Q/mem_reg[157][3]/CLK (DFFX1)                            0.00      30.00 r
+  library setup time                                               -0.28      29.72
+  data required time                                                          29.72
+  ------------------------------------------------------------------------------------
+  data required time                                                          29.72
+  data arrival time                                                          -29.72
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.00
+
+
+  Startpoint: u_sm_Q/wr_addr_reg[3]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_sm_ram_Q/mem_reg[157][2]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  zigbee_phy_tx      ForQA                 saed90nm_max
+  sm_ram_1           70000                 saed90nm_max
+
+  Point                                          Cap     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock clk (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  u_sm_Q/wr_addr_reg[3]/CLK (DFFX1)                       0.00      0.00 #     0.00 r
+  u_sm_Q/wr_addr_reg[3]/Q (DFFX1)               8.26      0.13      0.66       0.66 f
+  u_sm_Q/wr_addr[3] (symbol_mapper_1)                               0.00       0.66 f
+  u_sm_ram_Q/wr_addr[3] (sm_ram_1)                                  0.00       0.66 f
+  u_sm_ram_Q/U41/Q (AND2X1)                     5.32      0.11      0.98       1.64 f
+  u_sm_ram_Q/U4002/Q (AND2X4)                   4.25      0.13      6.33       7.97 f
+  u_sm_ram_Q/U449/Z (DELLN2X2)                  4.32      0.35      6.81      14.78 f
+  u_sm_ram_Q/U366/ZN (INVX0)                    1.64      0.16      3.46      18.25 r
+  u_sm_ram_Q/U386/ZN (INVX0)                    2.56      0.10      0.43      18.68 f
+  u_sm_ram_Q/U3430/QN (NAND2X0)                 3.27      0.20      1.33      20.01 r
+  u_sm_ram_Q/U2107/ZN (INVX0)                   1.58      0.09      1.64      21.65 f
+  u_sm_ram_Q/U2108/ZN (INVX0)                   6.25      0.18      0.43      22.08 r
+  u_sm_ram_Q/U532/Q (AO22X2)                    1.43      0.14      7.34      29.43 r
+  u_sm_ram_Q/mem_reg[157][2]/D (DFFX1)                    0.14      0.29      29.72 r
+  data arrival time                                                           29.72
+
+  clock clk (rise edge)                                            31.25      31.25
+  clock network delay (ideal)                                       0.00      31.25
+  clock uncertainty                                                -1.25      30.00
+  u_sm_ram_Q/mem_reg[157][2]/CLK (DFFX1)                            0.00      30.00 r
+  library setup time                                               -0.28      29.72
+  data required time                                                          29.72
+  ------------------------------------------------------------------------------------
+  data required time                                                          29.72
+  data arrival time                                                          -29.72
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.00
+
+
+  Startpoint: u_ctrl_fsm/sm_ram_rd_addr_reg_reg[3]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_sm_ram_I/data_out_reg[2]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  zigbee_phy_tx      ForQA                 saed90nm_max
+  sm_ram_0           70000                 saed90nm_max
+
+  Point                                          Cap     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock clk (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  u_ctrl_fsm/sm_ram_rd_addr_reg_reg[3]/CLK (DFFX1)        0.00      0.00 #     0.00 r
+  u_ctrl_fsm/sm_ram_rd_addr_reg_reg[3]/Q (DFFX1)
+                                                5.76      0.14      0.59       0.59 r
+  u_ctrl_fsm/o_sm_ram_rd_addr[3] (master_ctrl_fsm)                  0.00       0.59 r
+  u_sm_ram_I/rd_addr[3] (sm_ram_0)                                  0.00       0.59 r
+  u_sm_ram_I/U3118/ZN (INVX0)                   2.89      0.09      0.48       1.07 f
+  u_sm_ram_I/U3119/ZN (INVX0)                   3.36      0.12      1.44       2.52 r
+  u_sm_ram_I/U3183/Q (OR2X4)                    3.68      0.11      1.81       4.32 r
+  u_sm_ram_I/U3190/ZN (INVX0)                   2.61      0.08      1.81       6.14 f
+  u_sm_ram_I/U3061/Q (AND2X4)                   5.60      0.13      1.53       7.67 f
+  u_sm_ram_I/U3062/Z (NBUFFX4)                  3.87      0.08      4.55      12.23 f
+  u_sm_ram_I/U3035/Z (NBUFFX4)                  3.16      0.08      2.01      14.23 f
+  u_sm_ram_I/U3045/ZN (INVX0)                   4.91      0.15      1.58      15.82 r
+  u_sm_ram_I/U3049/ZN (INVX0)                   5.73      0.13      3.94      19.76 f
+  u_sm_ram_I/U1303/QN (AOI221X1)                1.20      0.09      6.99      26.75 r
+  u_sm_ram_I/U3225/Q (AND4X1)                   1.78      0.14      0.53      27.28 r
+  u_sm_ram_I/U3898/Q (OA22X1)                   1.21      0.11      0.61      27.88 r
+  u_sm_ram_I/U3899/Q (OA221X1)                  1.78      0.13      0.48      28.37 r
+  u_sm_ram_I/U3910/Q (OA22X1)                   0.94      0.10      0.60      28.97 r
+  u_sm_ram_I/U3911/QN (OAI221X1)                1.46      0.09      0.56      29.53 f
+  u_sm_ram_I/data_out_reg[2]/D (DFFX1)                    0.09      0.30      29.83 f
+  data arrival time                                                           29.83
+
+  clock clk (rise edge)                                            31.25      31.25
+  clock network delay (ideal)                                       0.00      31.25
+  clock uncertainty                                                -1.25      30.00
+  u_sm_ram_I/data_out_reg[2]/CLK (DFFX1)                            0.00      30.00 r
+  library setup time                                               -0.17      29.83
+  data required time                                                          29.83
+  ------------------------------------------------------------------------------------
+  data required time                                                          29.83
+  data arrival time                                                          -29.83
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.00
+
+
+  Startpoint: u_ctrl_fsm/sm_ram_rd_addr_reg_reg[3]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_sm_ram_Q/data_out_reg[2]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  zigbee_phy_tx      ForQA                 saed90nm_max
+  sm_ram_1           70000                 saed90nm_max
+
+  Point                                          Cap     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock clk (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  u_ctrl_fsm/sm_ram_rd_addr_reg_reg[3]/CLK (DFFX1)        0.00      0.00 #     0.00 r
+  u_ctrl_fsm/sm_ram_rd_addr_reg_reg[3]/Q (DFFX1)
+                                                5.60      0.11      0.65       0.65 f
+  u_ctrl_fsm/o_sm_ram_rd_addr[3] (master_ctrl_fsm)                  0.00       0.65 f
+  U17/ZN (INVX0)                                3.23      0.13      0.46       1.11 r
+  U20/ZN (INVX1)                                8.97      0.10      0.16       1.27 f
+  u_sm_ram_Q/rd_addr[3] (sm_ram_1)                                  0.00       1.27 f
+  u_sm_ram_Q/U3010/Z (NBUFFX4)                  3.35      0.08      1.03       2.30 f
+  u_sm_ram_Q/U3076/QN (NOR2X0)                  2.65      0.19      1.70       4.00 r
+  u_sm_ram_Q/U3088/ZN (INVX0)                   2.68      0.11      1.36       5.36 f
+  u_sm_ram_Q/U3089/ZN (INVX0)                   2.75      0.12      1.34       6.70 r
+  u_sm_ram_Q/U4005/Q (AND2X1)                   3.80      0.12      1.50       8.20 r
+  u_sm_ram_Q/U1827/Z (DELLN1X2)                 2.16      0.19      3.75      11.96 r
+  u_sm_ram_Q/U168/Z (DELLN1X2)                  4.61      0.20      1.86      13.81 r
+  u_sm_ram_Q/U2921/ZN (INVX0)                   4.75      0.13      2.30      16.12 f
+  u_sm_ram_Q/U1951/ZN (INVX0)                   5.60      0.18      3.81      19.92 r
+  u_sm_ram_Q/U3109/QN (AOI221X2)                1.27      0.08      6.81      26.73 f
+  u_sm_ram_Q/U3108/Q (AND4X1)                   1.51      0.12      0.51      27.24 f
+  u_sm_ram_Q/U3766/Q (OA22X1)                   1.28      0.10      0.55      27.78 f
+  u_sm_ram_Q/U3767/Q (OA221X1)                  1.59      0.11      0.53      28.31 f
+  u_sm_ram_Q/U3779/Q (OA22X1)                   1.00      0.09      0.56      28.87 f
+  u_sm_ram_Q/U3780/QN (OAI221X1)                1.43      0.10      0.56      29.44 r
+  u_sm_ram_Q/data_out_reg[2]/D (DFFX1)                    0.10      0.29      29.73 r
+  data arrival time                                                           29.73
+
+  clock clk (rise edge)                                            31.25      31.25
+  clock network delay (ideal)                                       0.00      31.25
+  clock uncertainty                                                -1.25      30.00
+  u_sm_ram_Q/data_out_reg[2]/CLK (DFFX1)                            0.00      30.00 r
+  library setup time                                               -0.27      29.73
+  data required time                                                          29.73
+  ------------------------------------------------------------------------------------
+  data required time                                                          29.73
+  data arrival time                                                          -29.73
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.01
+
+
+  Startpoint: u_sm_I/wr_addr_reg[2]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_sm_ram_I/mem_reg[94][3]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  zigbee_phy_tx      ForQA                 saed90nm_max
+  symbol_mapper_0    8000                  saed90nm_max
+  sm_ram_0           70000                 saed90nm_max
+
+  Point                           Cap     Trans      Incr       Path
+  ---------------------------------------------------------------------
+  clock clk (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  u_sm_I/wr_addr_reg[2]/CLK (DFFX2)        0.00      0.00 #     0.00 r
+  u_sm_I/wr_addr_reg[2]/QN (DFFX2)
+                                 2.86      0.17      0.45       0.45 f
+  u_sm_I/U34/ZN (INVX1)         12.42      0.19      0.20       0.65 r
+  u_sm_I/wr_addr[2] (symbol_mapper_0)                0.00       0.65 r
+  u_sm_ram_I/wr_addr[2] (sm_ram_0)                   0.00       0.65 r
+  u_sm_ram_I/U747/Q (AND2X1)     3.90      0.12      2.12       2.77 r
+  u_sm_ram_I/U1721/Z (DELLN1X2)
+                                 2.75      0.19      3.84       6.61 r
+  u_sm_ram_I/U989/Q (AND2X1)     3.32      0.11      1.53       8.13 r
+  u_sm_ram_I/U2514/Z (DELLN1X2)
+                                 4.13      0.20      3.39      11.52 r
+  u_sm_ram_I/U1502/Z (DELLN1X2)
+                                 4.12      0.20      4.05      15.57 r
+  u_sm_ram_I/U3568/QN (NAND2X0)
+                                 4.58      0.23      3.39      18.96 f
+  u_sm_ram_I/U3330/ZN (INVX0)
+                                 5.67      0.21      3.71      22.67 r
+  u_sm_ram_I/U1365/Q (AO22X2)
+                                 1.43      0.14      6.75      29.42 r
+  u_sm_ram_I/mem_reg[94][3]/D (DFFX1)      0.14      0.29      29.71 r
+  data arrival time                                            29.71
+
+  clock clk (rise edge)                             31.25      31.25
+  clock network delay (ideal)                        0.00      31.25
+  clock uncertainty                                 -1.25      30.00
+  u_sm_ram_I/mem_reg[94][3]/CLK (DFFX1)              0.00      30.00 r
+  library setup time                                -0.28      29.72
+  data required time                                           29.72
+  ---------------------------------------------------------------------
+  data required time                                           29.72
+  data arrival time                                           -29.71
+  ---------------------------------------------------------------------
+  slack (MET)                                                   0.01
+
+
+  Startpoint: u_sm_I/wr_addr_reg[7]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_sm_ram_I/mem_reg[49][0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  zigbee_phy_tx      ForQA                 saed90nm_max
+  sm_ram_0           70000                 saed90nm_max
+
+  Point                           Cap     Trans      Incr       Path
+  ---------------------------------------------------------------------
+  clock clk (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  u_sm_I/wr_addr_reg[7]/CLK (DFFX1)        0.00      0.00 #     0.00 r
+  u_sm_I/wr_addr_reg[7]/Q (DFFX1)
+                                 6.84      0.15      0.60       0.60 r
+  u_sm_I/wr_addr[7] (symbol_mapper_0)                0.00       0.60 r
+  U10/ZN (INVX0)                 3.70      0.10      0.56       1.16 f
+  U3/ZN (INVX0)                  8.11      0.22      0.29       1.45 r
+  u_sm_ram_I/wr_addr[7] (sm_ram_0)                   0.00       1.45 r
+  u_sm_ram_I/U982/Q (OR2X4)      6.10      0.11      1.02       2.48 r
+  u_sm_ram_I/U4049/QN (NOR3X0)
+                                 2.54      0.24      4.88       7.36 f
+  u_sm_ram_I/U1544/ZN (INVX0)
+                                 1.64      0.14      1.29       8.65 r
+  u_sm_ram_I/U1549/ZN (INVX0)
+                                 2.19      0.08      0.42       9.07 f
+  u_sm_ram_I/U2867/Z (DELLN1X2)
+                                 2.19      0.15      1.88      10.95 f
+  u_sm_ram_I/U2040/Z (DELLN1X2)
+                                 5.84      0.17      1.92      12.87 f
+  u_sm_ram_I/U3510/QN (NAND2X0)
+                                 3.27      0.22      6.73      19.60 r
+  u_sm_ram_I/U1868/ZN (INVX0)
+                                 1.58      0.10      1.64      21.24 f
+  u_sm_ram_I/U1869/ZN (INVX0)
+                                 6.64      0.19      0.44      21.68 r
+  u_sm_ram_I/U1376/Q (AO22X1)
+                                 1.43      0.12      7.75      29.43 r
+  u_sm_ram_I/mem_reg[49][0]/D (DFFX1)      0.12      0.29      29.72 r
+  data arrival time                                            29.72
+
+  clock clk (rise edge)                             31.25      31.25
+  clock network delay (ideal)                        0.00      31.25
+  clock uncertainty                                 -1.25      30.00
+  u_sm_ram_I/mem_reg[49][0]/CLK (DFFX1)              0.00      30.00 r
+  library setup time                                -0.28      29.72
+  data required time                                           29.72
+  ---------------------------------------------------------------------
+  data required time                                           29.72
+  data arrival time                                           -29.72
+  ---------------------------------------------------------------------
+  slack (MET)                                                   0.01
+
+
+  Startpoint: u_sm_Q/wr_addr_reg[4]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_sm_ram_Q/mem_reg[13][3]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  zigbee_phy_tx      ForQA                 saed90nm_max
+  symbol_mapper_1    8000                  saed90nm_max
+  sm_ram_1           70000                 saed90nm_max
+
+  Point                           Cap     Trans      Incr       Path
+  ---------------------------------------------------------------------
+  clock clk (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  u_sm_Q/wr_addr_reg[4]/CLK (DFFX1)        0.00      0.00 #     0.00 r
+  u_sm_Q/wr_addr_reg[4]/QN (DFFX1)
+                                 1.58      0.15      0.41       0.41 f
+  u_sm_Q/U34/ZN (INVX0)          1.88      0.11      0.12       0.53 r
+  u_sm_Q/wr_addr[4] (symbol_mapper_1)                0.00       0.53 r
+  U25/ZN (INVX0)                 1.82      0.07      0.11       0.65 f
+  U19/ZN (INVX0)                 5.27      0.15      0.13       0.78 r
+  u_sm_ram_Q/wr_addr[4] (sm_ram_1)                   0.00       0.78 r
+  u_sm_ram_Q/U2042/ZN (INVX0)
+                                 2.74      0.09      0.45       1.23 f
+  u_sm_ram_Q/U3135/QN (NAND2X0)
+                                 2.31      0.17      1.39       2.62 r
+  u_sm_ram_Q/U2800/Z (DELLN1X2)
+                                 4.43      0.20      1.92       4.54 r
+  u_sm_ram_Q/U2441/QN (NOR2X0)
+                                 1.58      0.13      2.22       6.77 f
+  u_sm_ram_Q/U2746/ZN (INVX0)
+                                 1.99      0.11      0.40       7.17 r
+  u_sm_ram_Q/U2608/QN (NOR2X0)
+                                 2.68      0.12      0.52       7.69 f
+  u_sm_ram_Q/U2808/ZN (INVX0)
+                                 1.64      0.10      1.34       9.03 r
+  u_sm_ram_Q/U2809/ZN (INVX0)
+                                 3.29      0.09      0.42       9.45 f
+  u_sm_ram_Q/U2879/Z (DELLN1X2)
+                                 5.84      0.17      3.43      12.87 f
+  u_sm_ram_Q/U3345/QN (NAND2X0)
+                                 3.27      0.22      6.73      19.60 r
+  u_sm_ram_Q/U2091/ZN (INVX0)
+                                 1.58      0.10      1.64      21.24 f
+  u_sm_ram_Q/U2092/ZN (INVX0)
+                                 6.64      0.19      0.44      21.68 r
+  u_sm_ram_Q/U1528/Q (AO22X1)
+                                 1.43      0.12      7.75      29.43 r
+  u_sm_ram_Q/mem_reg[13][3]/D (DFFX1)      0.12      0.29      29.72 r
+  data arrival time                                            29.72
+
+  clock clk (rise edge)                             31.25      31.25
+  clock network delay (ideal)                        0.00      31.25
+  clock uncertainty                                 -1.25      30.00
+  u_sm_ram_Q/mem_reg[13][3]/CLK (DFFX1)              0.00      30.00 r
+  library setup time                                -0.28      29.72
+  data required time                                           29.72
+  ---------------------------------------------------------------------
+  data required time                                           29.72
+  data arrival time                                           -29.72
+  ---------------------------------------------------------------------
+  slack (MET)                                                   0.01
+
+
+  Startpoint: u_sm_I/wr_addr_reg[7]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_sm_ram_I/mem_reg[49][1]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  zigbee_phy_tx      ForQA                 saed90nm_max
+  sm_ram_0           70000                 saed90nm_max
+
+  Point                           Cap     Trans      Incr       Path
+  ---------------------------------------------------------------------
+  clock clk (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  u_sm_I/wr_addr_reg[7]/CLK (DFFX1)        0.00      0.00 #     0.00 r
+  u_sm_I/wr_addr_reg[7]/Q (DFFX1)
+                                 6.84      0.15      0.60       0.60 r
+  u_sm_I/wr_addr[7] (symbol_mapper_0)                0.00       0.60 r
+  U10/ZN (INVX0)                 3.70      0.10      0.56       1.16 f
+  U3/ZN (INVX0)                  8.11      0.22      0.29       1.45 r
+  u_sm_ram_I/wr_addr[7] (sm_ram_0)                   0.00       1.45 r
+  u_sm_ram_I/U982/Q (OR2X4)      6.10      0.11      1.02       2.48 r
+  u_sm_ram_I/U4049/QN (NOR3X0)
+                                 2.54      0.24      4.88       7.36 f
+  u_sm_ram_I/U1544/ZN (INVX0)
+                                 1.64      0.14      1.29       8.65 r
+  u_sm_ram_I/U1549/ZN (INVX0)
+                                 2.19      0.08      0.42       9.07 f
+  u_sm_ram_I/U2867/Z (DELLN1X2)
+                                 2.19      0.15      1.88      10.95 f
+  u_sm_ram_I/U2040/Z (DELLN1X2)
+                                 5.84      0.17      1.92      12.87 f
+  u_sm_ram_I/U3510/QN (NAND2X0)
+                                 3.27      0.22      6.73      19.60 r
+  u_sm_ram_I/U1868/ZN (INVX0)
+                                 1.58      0.10      1.64      21.24 f
+  u_sm_ram_I/U1869/ZN (INVX0)
+                                 6.64      0.19      0.44      21.68 r
+  u_sm_ram_I/U1377/Q (AO22X1)
+                                 1.43      0.12      7.75      29.43 r
+  u_sm_ram_I/mem_reg[49][1]/D (DFFX1)      0.12      0.29      29.72 r
+  data arrival time                                            29.72
+
+  clock clk (rise edge)                             31.25      31.25
+  clock network delay (ideal)                        0.00      31.25
+  clock uncertainty                                 -1.25      30.00
+  u_sm_ram_I/mem_reg[49][1]/CLK (DFFX1)              0.00      30.00 r
+  library setup time                                -0.27      29.73
+  data required time                                           29.73
+  ---------------------------------------------------------------------
+  data required time                                           29.73
+  data arrival time                                           -29.72
+  ---------------------------------------------------------------------
+  slack (MET)                                                   0.01
+
+
+1

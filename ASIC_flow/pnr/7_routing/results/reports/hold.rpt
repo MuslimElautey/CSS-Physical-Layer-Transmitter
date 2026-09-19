@@ -1,0 +1,371 @@
+****************************************
+Report : timing
+        -path_type full
+        -delay_type min
+        -max_paths 10
+        -report_by design
+Design : zigbee_phy_tx
+Version: O-2018.06-SP1
+Date   : Fri Sep 18 16:22:13 2026
+****************************************
+Information: Timer using 'SI, Timing Window Analysis, CRPR'. (TIM-050)
+
+  Startpoint: u_mod_top/u_chirp/last_group_lat_reg (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_mod_top/u_chirp/done_mod_reg (rising edge-triggered flip-flop clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: clk
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 2.35      2.35
+
+  u_mod_top/u_chirp/last_group_lat_reg/CLK (DFFX1)
+                                                   0.00      2.35 r
+  u_mod_top/u_chirp/last_group_lat_reg/QN (DFFX1)
+                                                   0.56      2.91 r
+  u_mod_top/u_chirp/OPT_copt_h_inst_101675/Z (NBUFFX2)
+                                                   0.18      3.10 r
+  u_mod_top/u_chirp/U464/QN (NOR3X0)               0.12      3.21 f
+  u_mod_top/u_chirp/done_mod_reg/D (DFFX1)        -0.00      3.21 f
+  data arrival time                                          3.21
+
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 2.63      2.63
+  clock reconvergence pessimism                   -0.10      2.53
+  u_mod_top/u_chirp/done_mod_reg/CLK (DFFX1)       0.00      2.53 r
+  clock uncertainty                                0.70      3.23
+  library hold time                               -0.02      3.21
+  data required time                                         3.21
+  ------------------------------------------------------------------------
+  data required time                                         3.21
+  data arrival time                                         -3.21
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.00
+
+
+
+  Startpoint: u_sm_I/data_out_reg[1] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_sm_ram_I/mem_reg[152][1] (rising edge-triggered flip-flop clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: clk
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 2.13      2.13
+
+  u_sm_I/data_out_reg[1]/CLK (DFFX1)               0.00      2.13 r
+  u_sm_I/data_out_reg[1]/QN (DFFX1)                0.71      2.84 r
+  u_sm_ram_I/OPT_copt_h_inst_101676/Z (NBUFFX2)    0.26      3.10 r
+  u_sm_ram_I/U2645/QN (OAI22X1)                    0.39      3.49 f
+  u_sm_ram_I/mem_reg[152][1]/D (DFFX1)             0.00      3.49 f
+  data arrival time                                          3.49
+
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 2.81      2.81
+  clock reconvergence pessimism                   -0.05      2.76
+  u_sm_ram_I/mem_reg[152][1]/CLK (DFFX1)           0.00      2.76 r
+  clock uncertainty                                0.70      3.46
+  library hold time                                0.02      3.48
+  data required time                                         3.48
+  ------------------------------------------------------------------------
+  data required time                                         3.48
+  data arrival time                                         -3.49
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.01
+
+
+
+  Startpoint: u_sm_I/data_out_reg[2] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_sm_ram_I/mem_reg[173][2] (rising edge-triggered flip-flop clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: clk
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 2.17      2.17
+
+  u_sm_I/data_out_reg[2]/CLK (DFFX1)               0.00      2.17 r
+  u_sm_I/data_out_reg[2]/QN (DFFX1)                0.67      2.84 r
+  u_sm_ram_I/PLACE_HFSINV_17273_685/ZN (INVX8)     0.16      3.00 f
+  u_sm_ram_I/PLACE_HFSBUF_6660_672/Z (NBUFFX2)     0.22      3.22 f
+  u_sm_ram_I/U875/Q (AO22X1)                       0.30      3.52 f
+  u_sm_ram_I/mem_reg[173][2]/D (DFFX1)             0.00      3.52 f
+  data arrival time                                          3.52
+
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 2.85      2.85
+  clock reconvergence pessimism                   -0.05      2.80
+  u_sm_ram_I/mem_reg[173][2]/CLK (DFFX1)           0.00      2.80 r
+  clock uncertainty                                0.70      3.50
+  library hold time                                0.02      3.52
+  data required time                                         3.52
+  ------------------------------------------------------------------------
+  data required time                                         3.52
+  data arrival time                                         -3.52
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.01
+
+
+
+  Startpoint: u_sm_I/data_out_reg[1] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_sm_ram_I/mem_reg[154][1] (rising edge-triggered flip-flop clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: clk
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 2.13      2.13
+
+  u_sm_I/data_out_reg[1]/CLK (DFFX1)               0.00      2.13 r
+  u_sm_I/data_out_reg[1]/QN (DFFX1)                0.71      2.84 r
+  u_sm_ram_I/OPT_copt_h_inst_101676/Z (NBUFFX2)    0.26      3.10 r
+  u_sm_ram_I/U2646/QN (OAI22X1)                    0.39      3.49 f
+  u_sm_ram_I/mem_reg[154][1]/D (DFFX1)             0.00      3.49 f
+  data arrival time                                          3.49
+
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 2.81      2.81
+  clock reconvergence pessimism                   -0.05      2.76
+  u_sm_ram_I/mem_reg[154][1]/CLK (DFFX1)           0.00      2.76 r
+  clock uncertainty                                0.70      3.46
+  library hold time                                0.02      3.48
+  data required time                                         3.48
+  ------------------------------------------------------------------------
+  data required time                                         3.48
+  data arrival time                                         -3.49
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.01
+
+
+
+  Startpoint: u_sm_I/data_out_reg[2] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_sm_ram_I/mem_reg[10][2] (rising edge-triggered flip-flop clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: clk
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 2.17      2.17
+
+  u_sm_I/data_out_reg[2]/CLK (DFFX1)               0.00      2.17 r
+  u_sm_I/data_out_reg[2]/QN (DFFX1)                0.67      2.84 r
+  u_sm_ram_I/PLACE_HFSINV_17273_685/ZN (INVX8)     0.16      3.00 f
+  u_sm_ram_I/PLACE_HFSBUF_6660_672/Z (NBUFFX2)     0.22      3.22 f
+  u_sm_ram_I/U1542/Q (AO22X1)                      0.31      3.53 f
+  u_sm_ram_I/mem_reg[10][2]/D (DFFX1)              0.00      3.53 f
+  data arrival time                                          3.53
+
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 2.85      2.85
+  clock reconvergence pessimism                   -0.05      2.80
+  u_sm_ram_I/mem_reg[10][2]/CLK (DFFX1)            0.00      2.80 r
+  clock uncertainty                                0.70      3.50
+  library hold time                                0.02      3.52
+  data required time                                         3.52
+  ------------------------------------------------------------------------
+  data required time                                         3.52
+  data arrival time                                         -3.53
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.01
+
+
+
+  Startpoint: u_sm_I/data_out_reg[2] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_sm_ram_I/mem_reg[31][2] (rising edge-triggered flip-flop clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: clk
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 2.17      2.17
+
+  u_sm_I/data_out_reg[2]/CLK (DFFX1)               0.00      2.17 r
+  u_sm_I/data_out_reg[2]/QN (DFFX1)                0.67      2.84 r
+  u_sm_ram_I/PLACE_HFSINV_17273_685/ZN (INVX8)     0.16      3.00 f
+  u_sm_ram_I/PLACE_HFSBUF_6209_671/Z (NBUFFX2)     0.22      3.22 f
+  u_sm_ram_I/U1452/Q (AO22X1)                      0.31      3.53 f
+  u_sm_ram_I/mem_reg[31][2]/D (DFFX1)              0.00      3.53 f
+  data arrival time                                          3.53
+
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 2.83      2.83
+  clock reconvergence pessimism                   -0.05      2.78
+  u_sm_ram_I/mem_reg[31][2]/CLK (DFFX1)            0.00      2.78 r
+  clock uncertainty                                0.70      3.48
+  library hold time                                0.02      3.50
+  data required time                                         3.50
+  ------------------------------------------------------------------------
+  data required time                                         3.50
+  data arrival time                                         -3.53
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.03
+
+
+
+  Startpoint: u_sm_I/data_out_reg[2] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_sm_ram_I/mem_reg[122][2] (rising edge-triggered flip-flop clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: clk
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 2.17      2.17
+
+  u_sm_I/data_out_reg[2]/CLK (DFFX1)               0.00      2.17 r
+  u_sm_I/data_out_reg[2]/QN (DFFX1)                0.67      2.84 r
+  u_sm_ram_I/PLACE_HFSINV_17273_685/ZN (INVX8)     0.16      3.00 f
+  u_sm_ram_I/PLACE_HFSBUF_6660_672/Z (NBUFFX2)     0.22      3.22 f
+  u_sm_ram_I/U1082/Q (AO22X1)                      0.31      3.53 f
+  u_sm_ram_I/mem_reg[122][2]/D (DFFX1)            -0.00      3.53 f
+  data arrival time                                          3.53
+
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 2.81      2.81
+  clock reconvergence pessimism                   -0.05      2.76
+  u_sm_ram_I/mem_reg[122][2]/CLK (DFFX1)           0.00      2.76 r
+  clock uncertainty                                0.70      3.46
+  library hold time                                0.04      3.50
+  data required time                                         3.50
+  ------------------------------------------------------------------------
+  data required time                                         3.50
+  data arrival time                                         -3.53
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.03
+
+
+
+  Startpoint: u_sm_I/data_out_reg[3] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_sm_ram_I/mem_reg[91][3] (rising edge-triggered flip-flop clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: clk
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 2.13      2.13
+
+  u_sm_I/data_out_reg[3]/CLK (DFFX1)               0.00      2.13 r
+  u_sm_I/data_out_reg[3]/QN (DFFX1)                0.71      2.84 r
+  u_sm_ram_I/PLACE_HFSINV_16838_772/ZN (INVX4)     0.23      3.07 f
+  u_sm_ram_I/PLACE_HFSBUF_2382_731/Z (NBUFFX2)     0.25      3.32 f
+  u_sm_ram_I/U1529/Q (MUX21X1)                     0.26      3.58 f
+  u_sm_ram_I/mem_reg[91][3]/D (DFFX1)              0.00      3.58 f
+  data arrival time                                          3.58
+
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 2.87      2.87
+  clock reconvergence pessimism                   -0.05      2.82
+  u_sm_ram_I/mem_reg[91][3]/CLK (DFFX1)            0.00      2.82 r
+  clock uncertainty                                0.70      3.52
+  library hold time                                0.03      3.55
+  data required time                                         3.55
+  ------------------------------------------------------------------------
+  data required time                                         3.55
+  data arrival time                                         -3.58
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.03
+
+
+
+  Startpoint: u_sm_I/data_out_reg[0] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_sm_ram_I/mem_reg[229][0] (rising edge-triggered flip-flop clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: clk
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 2.13      2.13
+
+  u_sm_I/data_out_reg[0]/CLK (DFFX1)               0.00      2.13 r
+  u_sm_I/data_out_reg[0]/QN (DFFX1)                0.66      2.78 r
+  u_sm_ram_I/OPT_copt_h_inst_101674/Z (NBUFFX2)    0.23      3.01 r
+  u_sm_ram_I/U2662/QN (OAI22X1)                    0.38      3.39 f
+  u_sm_ram_I/mem_reg[229][0]/D (DFFX1)             0.00      3.39 f
+  data arrival time                                          3.39
+
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 2.66      2.66
+  clock reconvergence pessimism                   -0.05      2.61
+  u_sm_ram_I/mem_reg[229][0]/CLK (DFFX1)           0.00      2.61 r
+  clock uncertainty                                0.70      3.31
+  library hold time                                0.04      3.35
+  data required time                                         3.35
+  ------------------------------------------------------------------------
+  data required time                                         3.35
+  data arrival time                                         -3.39
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.04
+
+
+
+  Startpoint: u_sm_I/data_out_reg[2] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_sm_ram_I/mem_reg[11][2] (rising edge-triggered flip-flop clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: clk
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 2.17      2.17
+
+  u_sm_I/data_out_reg[2]/CLK (DFFX1)               0.00      2.17 r
+  u_sm_I/data_out_reg[2]/QN (DFFX1)                0.67      2.84 r
+  u_sm_ram_I/PLACE_HFSINV_17273_685/ZN (INVX8)     0.16      3.00 f
+  u_sm_ram_I/PLACE_HFSBUF_6660_672/Z (NBUFFX2)     0.22      3.22 f
+  u_sm_ram_I/U1537/Q (AO22X1)                      0.32      3.54 f
+  u_sm_ram_I/mem_reg[11][2]/D (DFFX1)             -0.00      3.54 f
+  data arrival time                                          3.54
+
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 2.81      2.81
+  clock reconvergence pessimism                   -0.05      2.76
+  u_sm_ram_I/mem_reg[11][2]/CLK (DFFX1)            0.00      2.76 r
+  clock uncertainty                                0.70      3.46
+  library hold time                                0.04      3.50
+  data required time                                         3.50
+  ------------------------------------------------------------------------
+  data required time                                         3.50
+  data arrival time                                         -3.54
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.04
+
+
+1

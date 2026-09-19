@@ -1,0 +1,91 @@
+****************************************
+ Report : clock settings
+ Design : zigbee_phy_tx_cts
+ Date   : Thu Sep 17 22:38:32 2026
+****************************************
+
+
+======================================
+Configurations 
+======================================
+
+##Global
+  Corner = default
+    Max transition: 1.000
+    Max capacitance: 50.000
+    Target skew: 0 (default)
+    Target latency: Not specified
+
+##clk
+  Corner = default
+    Max transition: 1.000
+    Max capacitance: 100.000
+    Target skew: 0.100
+    Target latency: 0.000
+
+
+======================================
+Routing Rules 
+======================================
+
+##Global
+Routing rule for sink nets: Not specified
+Routing rule for internal nets: Not specified
+Routing rule for root nets: Not specified
+Routing rule for all nets: Not specified
+Net-based routing rules (by set_clock_routing_rule): Not specified
+Net-based routing rules (by set_routing_rule): Not specified
+
+##clk
+Routing rule for sink nets: Default Min Layer:M1 Max Layer:M3
+Routing rule for internal nets: clk_network_NDR_internal  Min Layer:M3 Max Layer:M6
+Routing rule for root nets: clk_network_NDR_root  Min Layer:M6 Max Layer:M8
+Routing rule for all nets: Not specified
+Net-based routing rules (by set_clock_routing_rule): Not specified
+Net-based routing rules (by set_routing_rule): Not specified
+
+
+======================================
+Buffers and Inverters 
+======================================
+
+##Buffers
+Name                                   Area      Max Transition       Max Load
+------------------------------------------------------------------------------
+saed90nm_max_1/NBUFFX16              26.726               1.024         48.000
+saed90nm_max_1/NBUFFX2                5.530               1.024         48.000
+saed90nm_max_1/NBUFFX32              55.296               2.048        768.000
+saed90nm_max_1/NBUFFX4               10.138               1.024         48.000
+saed90nm_max_1/NBUFFX8               14.746               1.024         48.000
+
+##Inverters
+Name                                   Area      Max Transition       Max Load
+------------------------------------------------------------------------------
+saed90nm_max_1/IBUFFX16              31.334               1.024       3328.000
+saed90nm_max_1/IBUFFX2               10.138               1.024        416.000
+saed90nm_max_1/IBUFFX32              56.218               1.024       6656.000
+saed90nm_max_1/IBUFFX4               12.902               1.024        832.000
+saed90nm_max_1/IBUFFX8               18.432               1.024       1664.000
+saed90nm_max_1/INVX16                25.805               1.024       3328.000
+saed90nm_max_1/INVX2                  6.451               1.024        416.000
+saed90nm_max_1/INVX32                47.002               1.024       6656.000
+saed90nm_max_1/INVX4                  9.216               1.024        832.000
+saed90nm_max_1/INVX8                 14.746               1.024       1664.000
+
+
+======================================
+Spacing Rules 
+======================================
+
+##By design
+No by design spacing rule is specified
+
+##By clock
+No by clock spacing rule is specified
+
+##By libcell
+No by libcell spacing rule is specified
+
+##By clock and libcell
+No by clock and libcell spacing rule is specified
+1
