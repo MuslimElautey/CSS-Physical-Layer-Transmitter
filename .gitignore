@@ -3,3 +3,7 @@
 *.pdf
 CSS_PHY_Trasmitter-Floating-Fixed Point-20260904T135935Z-1-001/
 .dvt/
+qpsk_dqpsk_chirp_top/
+symbol_mapper_top/
+build/
+contribute.sh
